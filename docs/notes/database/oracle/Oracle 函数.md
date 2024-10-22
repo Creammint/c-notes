@@ -281,7 +281,7 @@ decode(字段或字段的运算，值 1，值 2，值 3）
 
 `NULLIF`：用于返回 `NULL` 值，如果两个表达式相等，则返回 `NULL`，否则返回第一个表达式的值；
 
-常用于判断除数是否为 0，对比`decode`更简洁明了；
+常用于判断除数是否为 0，对比`decode`更有阅读性和简洁明了；
 
 NULLIF(expression1, expression2)
 
