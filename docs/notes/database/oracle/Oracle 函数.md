@@ -3,7 +3,8 @@ title: Oracle 函数
 createTime: 2024/09/23 21:01:31
 permalink: /database/oracle/s53l996n/
 ---
-# Oracle函数
+
+# Oracle 函数
 
 ## 数值型函数
 
@@ -21,7 +22,7 @@ trunc(sysdate,’dd’)=trunc(sysdate)=xxxx-xx-xx:0:00:00,
 
 ### ceil(n)
 
-向上取整：大于或等于数值n的最小整数
+向上取整：大于或等于数值 n 的最小整数
 
 ```sql
 select ceil(10.6) from dual;    --11
@@ -29,7 +30,7 @@ select ceil(10.6) from dual;    --11
 
 ### floor(n)
 
-向下取整：小于等于数值n的最大整数
+向下取整：小于等于数值 n 的最大整数
 
 ```sql
 select ceil(10.6) from dual;   --10
@@ -37,7 +38,7 @@ select ceil(10.6) from dual;   --10
 
 ### mod(m,n)
 
-m除以n的余数,若n=0,则返回m
+m 除以 n 的余数,若 n=0,则返回 m
 
 ```sql
 select mod(7,5) from dual;    --2
@@ -45,7 +46,7 @@ select mod(7,5) from dual;    --2
 
 ### power(m,n)
 
-m的n次方
+m 的 n 次方
 
 ```sql
 select power(3,2) from dual;	--9
@@ -53,7 +54,7 @@ select power(3,2) from dual;	--9
 
 ### round(n,m)
 
-将n四舍五入,保留小数点后m位
+将 n 四舍五入,保留小数点后 m 位
 
 ```sql
 select round(1234.5678,2) from dual;	--1234.57
@@ -61,13 +62,13 @@ select round(1234.5678,2) from dual;	--1234.57
 
 ### sign()
 
-sign()：函数根据某个值是0、正数还是负数，分别返回0、1、-1
+sign()：函数根据某个值是 0、正数还是负数，分别返回 0、1、-1
 
 sign(正数)=1，sign(负数)=-1，sign(0)=0，
 
 ### sqrt(n)
 
-n的平方根
+n 的平方根
 
 ```sql
 select sqrt(25) from dual ;		--5
@@ -75,16 +76,14 @@ select sqrt(25) from dual ;		--5
 
 ### to_number()
 
-1. 将char或varchar2类型的string转换为一个number类型的数值，需要注意的是，被转换的字符串必须符合数值类型格式,如果被转换的字符串不符合数值型格式，Oracle将抛出错误提示;
+1. 将 char 或 varchar2 类型的 string 转换为一个 number 类型的数值，需要注意的是，被转换的字符串必须符合数值类型格式,如果被转换的字符串不符合数值型格式，Oracle 将抛出错误提示;
 
-2. to_number和to_char恰好是两个相反的函数；
+2. to_number 和 to_char 恰好是两个相反的函数；
 
    ```sql
    select to_number('000012134') from dual;
-   select to_number('88877') from dual; 
+   select to_number('88877') from dual;
    ```
-
-   
 
 3. 如果数字在格式范围内的话，就是正确的，否则就是错误的；如：
 
@@ -93,16 +92,12 @@ select sqrt(25) from dual ;		--5
    select to_number('$12345.678', '$999999.999') from dual;
    ```
 
-   
-
-4. 可以用来实现进制转换；16进制转换为10进制：
+4. 可以用来实现进制转换；16 进制转换为 10 进制：
 
    ```sql
    select to_number('19f','xxx') from dual;
    select to_number('f','xx') from dual;
    ```
-
-
 
 ### abs
 
@@ -123,8 +118,6 @@ SELECT ABS(-10) FROM DUAL;   –- 返回 10
 select initicap('mr.ecop') from dual;	--Mr.Ecop
 ```
 
-
-
 ### lower(), upper()
 
 `LOWER()` 函数将字符串中的所有大写字母转换为小写字母。
@@ -139,8 +132,6 @@ SELECT LOWER('HELLO WORLD') FROM dual; 	--hello world
 SELECT UPPER('hello world') FROM dual;  --HELLO WORLD
 ```
 
-
-
 ### replace()
 
 函数：replace()
@@ -150,8 +141,6 @@ SELECT UPPER('hello world') FROM dual;  --HELLO WORLD
 ```sql
 select replace('Scott','s','Boy') from dual;	--Boycott
 ```
-
-
 
 ### length()
 
@@ -207,13 +196,11 @@ SELECT TRIM(BOTH 'x' FROM 'xxxxTechxxxxx') FROM dual;	--Tech
 
 输出结果将去除字符串两侧的所有 `x` 字符。
 
-
-
 ### instr()
 
 **使用方法一**：instr( string1, string2 ) >0 / instr(源字符串, 目标字符串)>0
 
-此用法类似like 如果把大于0改成等于0则相当于 not like
+此用法类似 like 如果把大于 0 改成等于 0 则相当于 not like
 
 ```sql
 SELECT * FROM TABLE T WHERE INSTR(A.COL,'xx')>0
@@ -223,7 +210,7 @@ SELECT * FROM TABLE T WHERE LIKE '%xx%'
 
 **使用方法二**：instr( string1, string2 ) / instr(源字符串, 目标字符串)字符查找函数
 
-在string1中查找string2返回string1中第一次出现string2的下标
+在 string1 中查找 string2 返回 string1 中第一次出现 string2 的下标
 
 ```sql
 select instr('helloworld','l') from dual --返回的结果是3，oracle中下标从1开始
@@ -231,29 +218,27 @@ select instr('helloworld','l') from dual --返回的结果是3，oracle中下标
 
 **使用方法三**：instr( string1, string2 ,start_position,times) instr(源字符串, 目标字符串,开始位子，第几次出现)
 
-| –    | h    | e    | l    | l    | o    | w    | o    | r    | l    | d    |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| 正序 | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 10   |
-| 倒序 | -10  | -9   | -8   | -7   | -6   | -5   | -4   | -3   | -2   | -1   |
+| –    | h   | e   | l   | l   | o   | w   | o   | r   | l   | d   |
+| ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 正序 | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  |
+| 倒序 | -10 | -9  | -8  | -7  | -6  | -5  | -4  | -3  | -2  | -1  |
 
 ```sql
 1 select instr('helloworld','l',2,2) from dual;
  --返回结果：4 ：在"helloworld"的第2(e)号位置开始，查找第二次出现的“l”的位置
-2 select instr('helloworld','l',3,2) from dual; 
+2 select instr('helloworld','l',3,2) from dual;
 --返回结果：4 ：在"helloworld"的第3(l)号位置开始，查找第二次出现的“l”的位置
-3 select instr('helloworld','l',4,2) from dual; 
+3 select instr('helloworld','l',4,2) from dual;
 --返回结果：9 ：在"helloworld"的第4(l)号位置开始，查找第二次出现的“l”的位置
 4 select instr('helloworld','l',-1,1) from dual;
 --返回结果：9 ：在"helloworld"的倒数第1(d)号位置开始，往回查找第一次出现的“l”
-5 select instr('helloworld','l',-2,2) from dual; 
+5 select instr('helloworld','l',-2,2) from dual;
 --返回结果：4 ：在"helloworld"的倒数第1(d)号位置开始，往回查找第二次出现的“l”的位置
-6 select instr('helloworld','l',2,3) from dual;  
+6 select instr('helloworld','l',2,3) from dual;
 --返回结果：9 ：在"helloworld"的第2(e)号位置开始，查找第三次出现的“l”的位置
-7 select instr('helloworld','l',-2,3) from dual;  
+7 select instr('helloworld','l',-2,3) from dual;
 --返回结果：3 ：在"helloworld"的倒数第2(l)号位置开始，往回查找第三次出现的“l”
 ```
-
-
 
 ### substr()
 
@@ -270,11 +255,9 @@ SELECT SUBSTR('Hello World', 2, 3) FROM dual;	--ell
 SELECT SUBSTR('Hello World', -5) FROM dual;		--World
 ```
 
-
-
 ### decode
 
-decode(条件,值1,返回值1,值2,返回值2,…值n,返回值n,缺省值)
+decode(条件,值 1,返回值 1,值 2,返回值 2,…值 n,返回值 n,缺省值)
 该函数的含义如下：
 
 ```sql
@@ -283,22 +266,43 @@ IF 条件=值1 THEN
 ELSIF 条件=值2 THEN
    RETURN(翻译值2)
 ELSIF 条件=值n THEN
-   RETURN(翻译值n)	
+   RETURN(翻译值n)
   ......
 ELSE　　　　
      RETURN(缺省值)
 END IF　　　　
 ```
 
-decode(字段或字段的运算，值1，值2，值3）
-这个函数运行的结果是，当字段或字段的运算的值等于值1时，该函数返回值2，否则返回值3
-当然值1，值2，值3也可以是表达式，这个函数使得某些sql语句简单了许多
+decode(字段或字段的运算，值 1，值 2，值 3）
+这个函数运行的结果是，当字段或字段的运算的值等于值 1 时，该函数返回值 2，否则返回值 3
+当然值 1，值 2，值 3 也可以是表达式，这个函数使得某些 sql 语句简单了许多
 
+### nullif
 
+`NULLIF`：用于返回 `NULL` 值，如果两个表达式相等，则返回 `NULL`，否则返回第一个表达式的值；
+
+常用于判断除数是否为 0，对比`decode`更简洁明了；
+
+NULLIF(expression1, expression2)
+
+- `expression1`：第一个表达式。
+- `expression2`：第二个表达式。
+
+```sql
+--如果 column_name 中的值等于 'specific_value'，那么查询结果中对应的行将显示为 NULL。
+SELECT NULLIF(column_name, 'specific_value') FROM table_name;
+```
+
+例如：
+
+```sql
+--如果除数为0，则 ratio 将为 NULL。
+SELECT 100/NULLIF(0, 0) AS ratio FROM dual
+```
 
 ### to_date()
 
-函数在Oracle数据库中用于将字符串转换为日期类型。它使用特定的格式模型来解析字符串，并将其转换为Oracle的日期类型。
+函数在 Oracle 数据库中用于将字符串转换为日期类型。它使用特定的格式模型来解析字符串，并将其转换为 Oracle 的日期类型。
 
 `语法:`TO_DATE(string, format)
 
@@ -307,15 +311,15 @@ decode(字段或字段的运算，值1，值2，值3）
 - `YYYY` 四位年份
 - `MM` 两位月份
 - `DD` 两位日期
-- `HH24` 两位24小时制小时
+- `HH24` 两位 24 小时制小时
 - `MI` 分钟
 - `SS` 秒
 
 ```sql
-SELECT TO_DATE('2023-03-01', 'YYYY-MM-DD') FROM dual;	
+SELECT TO_DATE('2023-03-01', 'YYYY-MM-DD') FROM dual;
 ```
 
-`NLS参数:` `TO_DATE` 函数也可以接受NLS参数来定义一些特定的本地化设置，例如：
+`NLS参数:` `TO_DATE` 函数也可以接受 NLS 参数来定义一些特定的本地化设置，例如：
 
 - `NLS_DATE_LANGUAGE` 定义日期和时间的语言。
 
@@ -325,7 +329,7 @@ SELECT TO_DATE('2023-03-01', 'YYYY-MM-DD', 'NLS_DATE_LANGUAGE = American') FROM 
 
 ### to_char()
 
-`TO_CHAR` 函数在Oracle数据库中用于将数值或日期时间类型的数据转换为格式化的字符串。这个函数非常灵活，可以接受不同的格式模型来定义输出的字符串格式。
+`TO_CHAR` 函数在 Oracle 数据库中用于将数值或日期时间类型的数据转换为格式化的字符串。这个函数非常灵活，可以接受不同的格式模型来定义输出的字符串格式。
 
 #### 转换日期和时间
 
@@ -357,15 +361,15 @@ SELECT TO_CHAR(1234567.89, '999,999.99') FROM dual;
 - `'FM'`：去除前导和尾随的空格。
 - `'MI'`：在正数前添加空格，在负数前添加负号。
 - `'99'`：填充数字，如果数字不足则用空格填充。
-- `'0'`：填充数字，如果数字不足则用0填充。
+- `'0'`：填充数字，如果数字不足则用 0 填充。
 
 ```sql
 SELECT TO_CHAR(123, 'FM9990999.9') FROM dual;
 ```
 
-#### NLS参数
+#### NLS 参数
 
-`TO_CHAR` 函数还可以接受NLS参数来定义一些特定的本地化设置，例如：
+`TO_CHAR` 函数还可以接受 NLS 参数来定义一些特定的本地化设置，例如：
 
 - `'NLS_DATE_LANGUAGE = language'`：定义日期和时间的语言。
 - `'NLS_NUMERIC_CHARACTERS = .,'`：定义小数点和组分隔符。
@@ -373,8 +377,6 @@ SELECT TO_CHAR(123, 'FM9990999.9') FROM dual;
 ```sql
 SELECT TO_CHAR(1234567.89, '999,999.99', 'NLS_NUMERIC_CHARACTERS = .,') FROM dual;
 ```
-
-
 
 ### lpad，rpad
 
@@ -392,15 +394,11 @@ LPAD(str, len [, padstr ])
 SELECT LPAD('Hello', 10, '*') FROM dual;	--*****Hello
 ```
 
-
-
 `RPAD` 函数用于在字符串的右侧填充指定的字符，直到达到指定的长度。
 
 ```sql
 SELECT RPAD('Hello', 10, '*') FROM dual;	--Hello*****
 ```
-
-
 
 ## 日期函数
 
@@ -412,46 +410,44 @@ select sysdate from dual;
 
 ### **日期格式**
 
-以2023-03-02 17:09:23 为例
+以 2023-03-02 17:09:23 为例
 
-|                | **格式** |   **类型**   |               **名称**                |             **示例**             |
-| :------------: | :------: | :----------: | :-----------------------------------: | :------------------------------: |
-|   年（Year）   |    yy    |  two digits  |                两位年                 |              显示23              |
-|                |   yyy    | three digits |                三位年                 |             显示023              |
-|                |   yyyy   | four digits  |                四位年                 |             显示2023             |
-|  月（Month）   |    mm    |    number    |                两位月                 |              显示03              |
-|                |   mon    | abbreviated  |              字符集表示               |   显示3月(若是英文版，显示Mar)   |
-|                |  month   | spelled out  |              字符集表示               |  显示3月(若是英文版，显示March)  |
-|   日（Day）    |    dd    |    number    |              当月第几天               |              显示02              |
-|                |   ddd    |    number    |              当年第几天               |             显示061              |
-|                |    dy    | abbreviated  |            当周第几天缩写             |  显示星期四，若是英文版显示Thur  |
-|                |   day    | spelled out  |            当周第几天全写             | 显示星期三，若是英语显示Thursday |
-|                |    d     |    number    |         当周第几天，返回数字          |     显示5, 每周第1天是星期天     |
-|                |  ddspth  | spelled out  |        当月第几天（英文显示）         |            显示second            |
-|   Hour（时）   |    hh    |  two digits  |               12小时制                |              显示05              |
-|                |   hh24   |  two digits  |               24小时制                |              显示17              |
-|  Minute（分）  |    mi    |  two digits  |                60进制                 |              显示09              |
-|  Second（秒）  |    ss    |  two digits  |                60进制                 |              显示23              |
-| Quarter(季度） |    Q     |    digit     |                 季度                  |              显示1               |
-|   当年第几周   |    WW    |    digit     | 当年第几周（从年的第一天算7天为一周） |              显示09              |
-|                |    IW    |    digit     |              年的自然周               |              显示09              |
-|   当月第几周   |    W     |    digit     |              当月第几周               |              显示1               |
-
-
+|                | **格式** |   **类型**   |                **名称**                 |             **示例**              |
+| :------------: | :------: | :----------: | :-------------------------------------: | :-------------------------------: |
+|   年（Year）   |    yy    |  two digits  |                 两位年                  |              显示 23              |
+|                |   yyy    | three digits |                 三位年                  |             显示 023              |
+|                |   yyyy   | four digits  |                 四位年                  |             显示 2023             |
+|  月（Month）   |    mm    |    number    |                 两位月                  |              显示 03              |
+|                |   mon    | abbreviated  |               字符集表示                |  显示 3 月(若是英文版，显示 Mar)  |
+|                |  month   | spelled out  |               字符集表示                | 显示 3 月(若是英文版，显示 March) |
+|   日（Day）    |    dd    |    number    |               当月第几天                |              显示 02              |
+|                |   ddd    |    number    |               当年第几天                |             显示 061              |
+|                |    dy    | abbreviated  |             当周第几天缩写              |  显示星期四，若是英文版显示 Thur  |
+|                |   day    | spelled out  |             当周第几天全写              | 显示星期三，若是英语显示 Thursday |
+|                |    d     |    number    |          当周第几天，返回数字           |    显示 5, 每周第 1 天是星期天    |
+|                |  ddspth  | spelled out  |         当月第几天（英文显示）          |            显示 second            |
+|   Hour（时）   |    hh    |  two digits  |                12 小时制                |              显示 05              |
+|                |   hh24   |  two digits  |                24 小时制                |              显示 17              |
+|  Minute（分）  |    mi    |  two digits  |                 60 进制                 |              显示 09              |
+|  Second（秒）  |    ss    |  two digits  |                 60 进制                 |              显示 23              |
+| Quarter(季度） |    Q     |    digit     |                  季度                   |              显示 1               |
+|   当年第几周   |    WW    |    digit     | 当年第几周（从年的第一天算 7 天为一周） |              显示 09              |
+|                |    IW    |    digit     |               年的自然周                |              显示 09              |
+|   当月第几周   |    W     |    digit     |               当月第几周                |              显示 1               |
 
 ### 周
 
-1. WW 是从年的第一天算7天为一周，IW是自然周算的，可以看如下代码：
+1. WW 是从年的第一天算 7 天为一周，IW 是自然周算的，可以看如下代码：
 
    ```sql
    select to_char(to_date('2023-03-05','yyyy-mm-dd'),'IW')  from dual;  --09
-    
+
    select to_char(to_date('2023-03-05','yyyy-mm-dd'),'WW')  from dual;  --10
    ```
 
-   24小时格式下时间范围为： 0:00:00 - 23:59:59.... 12小时格式下时间范围为： 1:00:00 - 12:59:59....
+   24 小时格式下时间范围为： 0:00:00 - 23:59:59.... 12 小时格式下时间范围为： 1:00:00 - 12:59:59....
 
-2. 一周内的第几天：`D` 每星期的第1天是 `星期日`
+2. 一周内的第几天：`D` 每星期的第 1 天是 `星期日`
 
 3. 按周，月，季度，年分组的写法
 
@@ -459,28 +455,26 @@ select sysdate from dual;
    --按周分组：自然周 和 年的第一天算7天为一周
    select to_char(时间字段,'yyyy-IW'),其他字段 from 操作表 group by to_char(时间字段,'yyyy-IW');
    select to_char(时间字段,'yyyy-WW'),其他字段 from 操作表 group by to_char(时间字段,'yyyy-WW');
-   
+
    --按月份分组
    select to_char(时间字段,'yyyy-mm'),其他字段 from 操作表 group by to_char(时间字段,'yyyy-mm');
-   
+
    --按季度分组
    select to_char(时间字段,'yyyy-Q'),其他字段 from 操作表 group by to_char(时间字段,'yyyy-Q');
-   
+
    --按年分组
    select to_char(时间字段,'yyyy'),其他字段 from 操作表 group by to_char(时间字段,'yyyy');
    ```
 
-
-
 ### to_char
 
 ```sql
-select to_char(sysdate,'yyyy-mm-dd hh24:mi:ss') as nowTime from dual;   //日期转化为字符串   
-select to_char(sysdate,'yyyy') as nowYear   from dual;   //获取时间的年   
-select to_char(sysdate,'mm')    as nowMonth from dual;   //获取时间的月   
-select to_char(sysdate,'dd')    as nowDay    from dual;   //获取时间的日   
-select to_char(sysdate,'hh24') as nowHour   from dual;   //获取时间的时   
-select to_char(sysdate,'mi')    as nowMinute from dual;   //获取时间的分   
+select to_char(sysdate,'yyyy-mm-dd hh24:mi:ss') as nowTime from dual;   //日期转化为字符串
+select to_char(sysdate,'yyyy') as nowYear   from dual;   //获取时间的年
+select to_char(sysdate,'mm')    as nowMonth from dual;   //获取时间的月
+select to_char(sysdate,'dd')    as nowDay    from dual;   //获取时间的日
+select to_char(sysdate,'hh24') as nowHour   from dual;   //获取时间的时
+select to_char(sysdate,'mi')    as nowMinute from dual;   //获取时间的分
 select to_char(sysdate,'ss')    as nowSecond from dual;   //获取时间的秒
 ```
 
@@ -490,7 +484,7 @@ select to_char(sysdate,'ss')    as nowSecond from dual;   //获取时间的秒
 select to_date('2023-03-05 17:09:23','yyyy-mm-dd hh24:mi:ss') time from dual; --2023-03-05 17:09:23
 ```
 
-注意： to_date就要求转换的格式要和输入的字符型日期要对应，不然会报错，如下：
+注意： to_date 就要求转换的格式要和输入的字符型日期要对应，不然会报错，如下：
 
 ![请添加图片描述](https://y.creammint.cn/articles/images/7f73e5445a4d47ae8027d72b72f18b52.png)
 
@@ -504,45 +498,41 @@ Y： 一个字符串，表示用当前会话语言表示的一周中某一天的
 
 ```
 select NEXT_DAY(to_date('2023-03-02','yyyy-MM-dd'),'星期三') nextDay from dual;  --2023-03-08
-select NEXT_DAY(to_date('2023-03-02','yyyy-MM-dd'),3) nextDay from dual;  --2023-03-07 
+select NEXT_DAY(to_date('2023-03-02','yyyy-MM-dd'),3) nextDay from dual;  --2023-03-07
 ```
 
-注意：每星期的第1天是 `星期日`
-
-
+注意：每星期的第 1 天是 `星期日`
 
 ### TRUNC(X [,FORMAT])
 
-截断日期，返回的是日期, FORMAT 中与周相关的有D，IW，WW，W，FMWW
+截断日期，返回的是日期, FORMAT 中与周相关的有 D，IW，WW，W，FMWW
 
 ```sql
 --取周的开始时间和结束时间
 SELECT TRUNC(TO_DATE('2023-03-02','YYYY-MM-DD'),'IW') AS STARTDATE FROM DUAL; --本周周一
 SELECT TRUNC(TO_DATE('2023-03-02','YYYY-MM-DD'),'IW') + 6 AS ENDDATE FROM DUAL; --本周周日
- 
-SELECT TRUNC(TO_DATE('2023-03-02','YYYY-MM-DD'),'IW') - 7 AS STARTDATE FROM DUAL;--上周周一   
+
+SELECT TRUNC(TO_DATE('2023-03-02','YYYY-MM-DD'),'IW') - 7 AS STARTDATE FROM DUAL;--上周周一
 SELECT TRUNC(TO_DATE('2023-03-02','YYYY-MM-DD'),'IW') - 1  AS ENDDATE FROM DUAL;--上周周日
 ```
 
-
-
 ### EXTRACT()
 
-从一个date或者interval类型中截取到特定的部分
+从一个 date 或者 interval 类型中截取到特定的部分
 
 ```sql
-extract (    
- 
-        { year | month | day | hour | minute | second }    
- 
-        | { timezone_hour | timezone_minute }    
- 
-        | { timezone_region | timezone_abbr }    
- 
+extract (
+
+        { year | month | day | hour | minute | second }
+
+        | { timezone_hour | timezone_minute }
+
+        | { timezone_region | timezone_abbr }
+
 from { date_value | interval_value } )
 ```
 
-只可以从一个date类型中截取年月日
+只可以从一个 date 类型中截取年月日
 
 ```sql
 select  extract (year from sysdate) year, extract (month from sysdate) month, extract (day from sysdate) day from  dual;
@@ -552,10 +542,10 @@ YEAR      MONTH        DAY
 2023         3           2
 ```
 
-从timestamp中获取年月日时分秒
+从 timestamp 中获取年月日时分秒
 
 ```sql
-select 
+select
  extract(year from systimestamp) year
 ,extract(month from systimestamp) month
 ,extract(day from systimestamp) day
@@ -570,8 +560,6 @@ from dual
 
 ![image-20240923205627645](https://y.creammint.cn/articles/images/image-20240923205627645.png)
 
-
-
 ### **时间差**
 
 #### **年份差（相差月数/12）**
@@ -579,14 +567,12 @@ from dual
 ```
 select ((months_between(TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss'),TO_DATE('2016-5-31','yyyy-mm-dd hh24:mi:ss')))/12)
 As 相差年份 from dual;
---结果:2 
+--结果:2
 select trunc(months_between(sysdate, to_date('2017-01-01','yyyy-mm-dd')) / 12) As 相差年份 from dual;
 --结果：6
 SELECT EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM TO_DATE('2017-01-01','YYYY-MM-DD')) As 相差年份 YEARS FROM DUAL;
 --结果:6
 ```
-
-
 
 #### **月数差（months_between()函数）**
 
@@ -595,17 +581,17 @@ SELECT EXTRACT(YEAR FROM SYSDATE) - EXTRACT(YEAR FROM TO_DATE('2017-01-01','YYYY
 --1）月份都是最后一天，A日期 > B日期 ,返回整数 ---
 select months_between(TO_DATE('2018-6-30','yyyy-mm-dd hh24:mi:ss'),TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss'))
 As 相差月份1 from dual;  --返结果：1
- 
+
 --2）月份都是最后一天，B日期 > A日期 ,返回负数 ---
 select months_between(TO_DATE('2018-4-30','yyyy-mm-dd hh24:mi:ss'),TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss'))
 As 相差月份2 from dual;  --f返回结果：-1
- 
+
 --3）月份天数不一样，A日期 > B日期 ,返回带小数的数字---
 select months_between(TO_DATE('2018-6-25','yyyy-mm-dd hh24:mi:ss'),TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss'))
 As 相差月份3 from dual;  --返回结果：0.8064516...
 ```
 
-#### **相差天数（两个日期相减，并用to_number()函数）**
+#### **相差天数（两个日期相减，并用 to_number()函数）**
 
 ```sql
 --Oracle中两个日期相差天数--
@@ -613,58 +599,52 @@ select TO_NUMBER(TO_DATE('2023-3-2','yyyy-mm-dd hh24:mi:ss')- TO_DATE('1999-7-15
 AS 相差天数 from dual; --8631
 ```
 
-
-
 #### **相差小时数，分钟数，秒数（时制进行转换）**
 
 ```sql
 --Oracle中两个日期相差小时数--
 select TO_NUMBER((TO_DATE('2018-6-5','yyyy-mm-dd hh24:mi:ss')- TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss'))*24)
 AS 相差小时数 from dual;
- 
+
 --Oracle中两个日期相差分钟数--
 select TO_NUMBER((TO_DATE('2018-6-5','yyyy-mm-dd hh24:mi:ss')- TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss'))*24*60)
 AS 相差分钟数 from dual;
- 
+
 --Oracle中两个日期相差秒数--
 select TO_NUMBER((TO_DATE('2018-6-5','yyyy-mm-dd hh24:mi:ss')- TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss'))*24*60*60)
 AS 相差秒数 from dual;
 ```
 
-
-
 #### **日期加减法**
 
-在Oralce中我发现有add_months函数，加天数N可以用如下方法实现，select sysdate+N from dual；
+在 Oralce 中我发现有 add_months 函数，加天数 N 可以用如下方法实现，select sysdate+N from dual；
 
-sysdate+1 加一天 sysdate+1/24 加1小时 sysdate+1/(24*60) 加1分钟 sysdate+1/(24*60*60) 加1秒钟 类推至毫秒0.001秒
+sysdate+1 加一天 sysdate+1/24 加 1 小时 sysdate+1/(24*60) 加 1 分钟 sysdate+1/(24*60\*60) 加 1 秒钟 类推至毫秒 0.001 秒
 
 ##### 加法
 
 ```sql
-select sysdate,add_months(sysdate,12) from dual;        --加1年 
-select sysdate,add_months(sysdate,1) from dual;        --加1月 
-select sysdate,to_char(sysdate+7,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1星期 
-select sysdate,to_char(sysdate+1,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1天 
-select sysdate,to_char(sysdate+1/24,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1小时 
-select sysdate,to_char(sysdate+1/24/60,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1分钟 
-select sysdate,to_char(sysdate+1/24/60/60,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1秒 
+select sysdate,add_months(sysdate,12) from dual;        --加1年
+select sysdate,add_months(sysdate,1) from dual;        --加1月
+select sysdate,to_char(sysdate+7,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1星期
+select sysdate,to_char(sysdate+1,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1天
+select sysdate,to_char(sysdate+1/24,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1小时
+select sysdate,to_char(sysdate+1/24/60,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1分钟
+select sysdate,to_char(sysdate+1/24/60/60,'yyyy-mm-dd HH24:MI:SS') from dual;  --加1秒
 ```
 
 ##### 减法
 
 ```sql
-select sysdate,add_months(sysdate,-12) from dual;        --减1年 
-select sysdate,add_months(sysdate,-1) from dual;        --减1月 
-select sysdate,to_char(sysdate-7,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1星期 
-select sysdate,to_char(sysdate-1,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1天 
-select sysdate,to_char(sysdate-1/24,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1小时 
-select sysdate,to_char(sysdate-1/24/60,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1分钟 
+select sysdate,add_months(sysdate,-12) from dual;        --减1年
+select sysdate,add_months(sysdate,-1) from dual;        --减1月
+select sysdate,to_char(sysdate-7,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1星期
+select sysdate,to_char(sysdate-1,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1天
+select sysdate,to_char(sysdate-1/24,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1小时
+select sysdate,to_char(sysdate-1/24/60,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1分钟
 select sysdate,to_char(sysdate-1/24/60/60,'yyyy-mm-dd HH24:MI:SS') from dual;  --减1秒
 
 ```
-
-
 
 #### **获取两个日期之间的时间间隔，extract()函数是最好的选择**
 
@@ -687,15 +667,11 @@ dual
 
 ![image-20240923205737343](https://y.creammint.cn/articles/images/image-20240923205737343.png)
 
-
-
 #### **获取日期中最晚的一个**
 
 ```sql
 select greatest('2023-01-01','2023-03-08','2022-10-01') from dual; --2023-03-08
 ```
-
-
 
 #### **查找月的第一天，最后一天**
 
@@ -707,8 +683,6 @@ SELECT Trunc(Trunc(SYSDATE, 'MONTH') - 1, 'MONTH') First_Day_Last_Month,
 FROM dual;
 ```
 
-
-
 ## 特殊函数
 
 ### row_number() over()
@@ -719,7 +693,7 @@ FROM dual;
 
 `参数:`
 
-- `PARTITION BY`: 可选参数，用于将数据划分为多个分区。在每个分区内，行号将独立重新从1开始分配。
+- `PARTITION BY`: 可选参数，用于将数据划分为多个分区。在每个分区内，行号将独立重新从 1 开始分配。
 - `ORDER BY`: 必需参数，用于指定行号分配的顺序。如果未指定 `ORDER BY`，则行号的分配顺序是不确定的。
 
 ```sql
@@ -732,50 +706,92 @@ SELECT department_id, employee_id, salary, ROW_NUMBER() OVER(PARTITION BY depart
 FROM employees;
 ```
 
+### ratio_to_report
 
+`RATIO_TO_REPORT`：用于计算某个值与一组值总和的比例。
 
-### CASE 
+**语法**：
+
+```sql
+RATIO_TO_REPORT(expr) OVER ([query_partition_clause])
+```
+
+- `expr`：这是你想要计算占比的数值表达式。如果 `expr` 计算结果为 `NULL`，则 `RATIO_TO_REPORT` 的结果也将是 `NULL`。
+- `OVER`：这是指定分析函数的窗口的关键字。
+- `query_partition_clause`：这是一个可选的子句，用于指定如何对数据进行分区。如果不指定分区子句，则整个查询结果集被视为一个分区。分区子句通常用于在不同的分组内计算比率。
+
+`query_partition_clause` 的一般形式是：
+
+```sql
+--其中 column_name 或 column_list 指定了用于分区的列。
+PARTITION BY column_name
+--or
+PARTITION BY (column_list)
+```
+
+**例子**：
+
+```sql
+--1. 计算每个采购员的工资占所有采购员工资总和的比例：
+SELECT last_name, salary, RATIO_TO_REPORT(salary) OVER () AS rr
+FROM employees
+WHERE job_id = 'PU_CLERK'
+ORDER BY last_name, salary, rr;
+
+--2. 按月份分组，计算每个区域销售额占当月销售总额的比例：
+SELECT t.month_id,
+       t.area,
+       sale,
+       ratio_to_report(sale) over(partition by t.month_id) sale_ratio
+FROM t;
+
+--3. 计算每个员工的工资占部门工资总和的比例：
+SELECT ename, sal, deptno, RATIO_TO_REPORT(sal) OVER (PARTITION BY deptno) AS ratio
+FROM emp;
+```
+
+### CASE
 
 流程控制语句 流程控制函数
 
-#### simple CASE(简单形式) 
+#### simple CASE(简单形式)
 
-`simple CASE：`类似DECODE函数
+`simple CASE：`类似 DECODE 函数
 
-simple case的表达式：
+simple case 的表达式：
 
 ```sql
 	写法一
-	case expr 
+	case expr
 		when compare1 then value1
 		when compare2 then value2
 		when compare3 then value3
-		else defualtvalue 
+		else defualtvalue
 	end alias
 	decode(expr ,compare1 ,value1,compare2 ,value2,compare3 ,value3,defualtvalue ) alias
 	--两个语句返回的结果是一样的
 ```
 
-每个when单个值匹配， 当expr匹配到compare时返回then后面value,匹配不到值的时候就返回else中的defualtvalue，**decode**函数也是这个用法
-也跟switch case类似语句
-最多支持255个参数，其中每对When…Then算作2个参数
+每个 when 单个值匹配， 当 expr 匹配到 compare 时返回 then 后面 value,匹配不到值的时候就返回 else 中的 defualtvalue，**decode**函数也是这个用法
+也跟 switch case 类似语句
+最多支持 255 个参数，其中每对 When…Then 算作 2 个参数
 
 #### Case When
 
-searched case的表达式：
+searched case 的表达式：
 
 ```sql
-	case 
+	case
 		when condition1 then returnvalue1
 		when condition2 then returnvalue2
 		when condition3 then returnvalue3
-		else defualtvalue 
+		else defualtvalue
 	end
-	case 
+	case
 		when expr > comparevalue1 then returnvalue1
 		when expr = comparevalue2 then returnvalue2*x
 		when expr in (comparevalue3 ,comparevalue4 ) then returnvalue3
-		else defualtvalue 
+		else defualtvalue
 	end
 ```
 
@@ -793,10 +809,8 @@ fweight,
 from T_person
 ```
 
-condition1 是条件表达式与expr>comparevalue1一样
-最多支持255个参数，其中每对When…Then算作2个参数
-
-
+condition1 是条件表达式与 expr>comparevalue1 一样
+最多支持 255 个参数，其中每对 When…Then 算作 2 个参数
 
 ### pivot：行转列
 
@@ -836,8 +850,6 @@ PIVOT
 );
 ```
 
-
-
 ### in，exists，not in，not exists
 
 #### 定义
@@ -849,7 +861,7 @@ SELECT * FROM employees
 WHERE department_id IN (1, 2, 3);
 ```
 
-这个查询会返回所有 `department_id` 为1、2或3的员工记录。
+这个查询会返回所有 `department_id` 为 1、2 或 3 的员工记录。
 
 **exists/not exists**：检查子查询是否返回至少一行数据。它是一个布尔操作符，如果子查询至少返回一行，它就返回 `TRUE`。
 
@@ -862,11 +874,9 @@ WHERE EXISTS (SELECT * FROM departments d WHERE e.department_id = d.department_i
 
 #### 区别
 
-`IN/NOT IN` 通常与子查询一起使用，如果子查询返回大量数据，可能会导致性能问题，因为Oracle需要在内部执行两次查询：一次是子查询本身，另一次是外部查询与子查询结果的比较。
+`IN/NOT IN` 通常与子查询一起使用，如果子查询返回大量数据，可能会导致性能问题，因为 Oracle 需要在内部执行两次查询：一次是子查询本身，另一次是外部查询与子查询结果的比较。
 
 `EXISTS/NOT EXISTS` 通常更高效，因为它只检查子查询是否返回行，而不需要实际检索所有行。一旦找到匹配的行，子查询就会停止执行。
-
-
 
 ## 其它单行函数
 
@@ -876,7 +886,7 @@ WHERE EXISTS (SELECT * FROM departments d WHERE e.department_id = d.department_i
 
 ```sql
 --如果 employee_name 是 NULL，它将被替换为 'No Name Provided'。
-SELECT NVL(employee_name, 'No Name Provided') FROM employees;	
+SELECT NVL(employee_name, 'No Name Provided') FROM employees;
 ```
 
 `NVL2` 函数是 `NVL` 函数的扩展，它接受三个参数。如果第一个参数是 `NULL`，它返回第三个参数的值；如果第一个参数不是 `NULL`，则返回第二个参数的值。
@@ -891,8 +901,6 @@ SELECT NVL2(employee_name, 'Employee', 'No Name Provided') FROM employees;
 - `NVL` 仅替换 `NULL` 值为指定的值。
 - `NVL2` 提供了更多的灵活性，允许你为 `NULL` 和非 `NULL` 值指定不同的返回值
 
-
-
 ### rownum
 
 返回行号
@@ -900,8 +908,6 @@ SELECT NVL2(employee_name, 'Employee', 'No Name Provided') FROM employees;
 ```sql
 Select rownum From dual;	--1
 ```
-
-
 
 ## 聚合函数
 
@@ -912,62 +918,3 @@ Select rownum From dual;	--1
 | MIN    | 最小值                    |
 | MAX    | 最大值                    |
 | COUNT  | 统计个数                  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
