@@ -369,7 +369,16 @@ export const NAV_DATA: NavData[] = [
       },
     ],
   },
-  
+  {
+    title: 'VPN',
+    items: [
+      {
+        icon: 'https://mojie.app/favicon.ico',
+        title: '魔戒.net',
+        link: 'https://mojie.app/',
+      },
+    ],
+  },
   {
     title: '软件安装',
     items: [
@@ -471,16 +480,6 @@ export const NAV_DATA: NavData[] = [
     ],
   },
   {
-    title: 'VPN',
-    items: [
-      {
-        icon: 'https://mojie.app/favicon.ico',
-        title: '魔戒.net',
-        link: 'https://mojie.app/',
-      },
-    ],
-  },
-  {
     title: '摸鱼专用',
     items: [
       {
@@ -512,6 +511,12 @@ export const NAV_DATA: NavData[] = [
         title: 'Twitter',
         // desc: '',
         link: 'https://twitter.com',
+      },
+      {
+        icon: '/icons/pixiv.png',
+        title: 'Pixiv',
+        // desc: '',
+        link: 'https://www.pixiv.net',
       },
     ],
   },

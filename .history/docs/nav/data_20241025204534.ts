@@ -369,7 +369,16 @@ export const NAV_DATA: NavData[] = [
       },
     ],
   },
-  
+  {
+    title: 'VPN',
+    items: [
+      {
+        icon: 'https://mojie.app/favicon.ico',
+        title: '魔戒.net',
+        link: 'https://mojie.app/',
+      },
+    ],
+  },
   {
     title: '软件安装',
     items: [
@@ -467,16 +476,6 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://mail.163.com/favicon.ico',
         title: '163网易邮箱大师',
         link: 'https://mail.163.com/',
-      },
-    ],
-  },
-  {
-    title: 'VPN',
-    items: [
-      {
-        icon: 'https://mojie.app/favicon.ico',
-        title: '魔戒.net',
-        link: 'https://mojie.app/',
       },
     ],
   },
