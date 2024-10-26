@@ -15,24 +15,26 @@ hero:
     - text: 薄荷糖毕设
       link: https://bs.creammint.cn/
       theme: alt
-    - text: 前端导航
+    - text: 导航页
       link: /nav/
-      theme: alt
 
 features:
-  - icon: 📖
-    title: 前端导航
+  - icon:
+      src: 'https://y.creammint.cn/basis/nav/icon-nav-64.png'
+    title: 导航页
     details: 个人收藏的好用站点
     link: /nav/
-    linkText: 前端导航
-  - icon: 📘
+    linkText: 导航页
+  - icon:
+      src: 'https://y.creammint.cn/basis/nav/icon-database-96.png'
     title: 数据库
     details: Oracle、MySQL等主流数据库知识笔记、语法和用法等
     link: /notes/database/oracle/Oracle 简介
     linkText: sql
-  - icon: 💡
+  - icon:
+      src: 'https://y.creammint.cn/basis/nav/icon-Java-96.png'
     title: Java
-    details: 慢慢开始把Java重新捡起来，记录一些业务实现逻辑和笔记知识
+    details: 记录Java相关一些业务实现逻辑和笔记知识
     link: /notes/java/Excel文件上传
     linkText: Java
 ---

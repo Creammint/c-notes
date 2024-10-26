@@ -33,19 +33,13 @@ export const NAV_DATA: NavData[] = [
         desc: '使用Hexo+butterfly搭建的博客',
         link: 'https://creammint.github.io/',
       },
-      {
-        icon: 'https://v6.51.la/favicon.ico',
-        title: '51.LA',
-        desc: '网站数据统计与营销分析平台',
-        link: 'https://v6.51.la/',
-      },
+      
       {
         //icon: 'https://creammint-pic-1304832043.cos.ap-hongkong.myqcloud.com/basicdata_img/icon.png',
         title: 'Butterfly主题美化教程',
         desc: '让每个人轻松的自定义自己的博客',
         link: 'https://butterfly.zhheo.com/',
       },
-      
     ],
   },
   {
@@ -64,7 +58,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://tinypng.com',
       },
       {
-        //icon: 'https://ps.gaoding.com/favicon.ico',
+        icon: 'https://y.creammint.cn/basis/nav/icon-shuaxin-100.png',
         title: 'NVERT.COM',
         desc: 'JPG转WEBP - 在线转换图像文件',
         link: 'https://www.aconvert.com/cn/image/jpg-to-webp/',
@@ -112,6 +106,24 @@ export const NAV_DATA: NavData[] = [
         desc: '软件网页icons',
         link: 'https://igoutu.cn/icons',
       },
+      {
+        icon: 'https://www.hellofont.cn/favicon.ico',
+        title: '字由',
+        link: 'https://www.hellofont.cn/',
+        desc: '字体下载',
+      },
+      {
+        icon: 'https://www.pexels.com/assets/static/images/meta/pexels-icon.png',
+        title: 'Pexels',
+        link: 'https://www.pexels.com/zh-cn/',
+        desc: '免费素材图片',
+      },
+      {
+        icon: 'https://xiumi.us/images/b80cd8.xiumi_logo_40.png',
+        title: '秀米XIUMI',
+        link: 'https://xiumi.us/#/',
+        desc: '用于写公众号文章',
+      },
     ],
   },
   {
@@ -132,6 +144,7 @@ export const NAV_DATA: NavData[] = [
         title: 'Midjourney（绘画）',
         link: 'https://www.midjourney.com',
       },
+      
     ],
   },
   {
@@ -144,24 +157,35 @@ export const NAV_DATA: NavData[] = [
         desc: '微信公众平台',
       },
       {
-        icon: 'https://xiumi.us/images/b80cd8.xiumi_logo_40.png',
-        title: '秀米XIUMI',
-        link: 'https://xiumi.us/#/',
-        desc: '用于写公众号文章',
+        icon: 'https://res.wx.qq.com/t/wx_fed/finder/helper/finder-helper-web/res/favicon-v2.ico',
+        title: '视频号',
+        link: 'https://channels.weixin.qq.com/',
+        desc: '视频号助手',
       },
       {
-        icon: 'https://www.hellofont.cn/favicon.ico',
-        title: '字由',
-        link: 'https://www.hellofont.cn/',
-        desc: '字体下载',
+        icon: 'https://static.hdslb.com/mobile/img/512.png',
+        title: '哔哩哔哩',
+        link: 'https://www.bilibili.com',
+        desc: '哔哩哔哩',
       },
       {
-        icon: 'https://www.pexels.com/assets/static/images/meta/pexels-icon.png',
-        title: 'Pexels',
-        link: 'https://www.pexels.com/zh-cn/',
-        desc: '免费素材图片',
+        icon: 'https://www.xiaohongshu.com/favicon.ico',
+        title: '小红书',
+        link: 'https://creator.xiaohongshu.com/new/home',
+        desc: '小红书',
       },
-      
+      {
+        title: 'CSDN',
+        icon: 'https://g.csdnimg.cn/static/logo/favicon32.ico',
+        desc: 'CSDN是一个面向开发者的知识分享社区',
+        link: 'https://blog.csdn.net/',
+      },
+      {
+        title: '知乎',
+        icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
+        desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
+        link: 'https://juejin.cn',
+      },
     ],
   },
   {
@@ -201,24 +225,10 @@ export const NAV_DATA: NavData[] = [
       },
       {
         title: '博客园',
-        // icon: 'https://common.cnblogs.com/favicon.ico',
         icon: '/icons/cnblogs.svg',
         desc: '博客园是一个面向开发者的知识分享社区',
         link: 'https://www.cnblogs.com',
       },
-      {
-        title: '知乎',
-        icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
-        desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
-        link: 'https://juejin.cn',
-      },
-      {
-        title: 'CSDN',
-        icon: 'https://g.csdnimg.cn/static/logo/favicon32.ico',
-        desc: 'CSDN是一个面向开发者的知识分享社区',
-        link: 'https://blog.csdn.net/',
-      },
-      
     ],
   },
   {
@@ -243,6 +253,12 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://www.upyun.com/static/favicon-64x64.png',
         title: '又拍云',
         link: 'https://www.upyun.com/',
+      },
+      {
+        icon: 'https://v6.51.la/favicon.ico',
+        title: '51.LA',
+        desc: '网站数据统计与营销分析平台',
+        link: 'https://v6.51.la/',
       },
       {
         icon: 'https://ythzxfw.miit.gov.cn/favicon.ico',
@@ -495,12 +511,7 @@ export const NAV_DATA: NavData[] = [
         // desc: '中国领先的在线视频媒体平台，海量高清视频在线观看',
         link: 'https://v.qq.com',
       },
-      {
-        icon: 'https://static.hdslb.com/mobile/img/512.png',
-        title: '哔哩哔哩',
-        // desc: '',
-        link: 'https://www.bilibili.com',
-      },
+      
       {
         icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
         title: 'YouTube',
