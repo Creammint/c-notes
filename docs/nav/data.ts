@@ -261,6 +261,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://v6.51.la/',
       },
       {
+        icon: 'https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico',
+        title: 'vercel',
+        desc: 'vercel+Github静态资源部署网站',
+        link: 'https://vercel.com/',
+      },
+      {
         icon: 'https://ythzxfw.miit.gov.cn/favicon.ico',
         title: '工业与信息化部政务服务平台',
         link: 'https://ythzxfw.miit.gov.cn/RecordSystem',
