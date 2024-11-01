@@ -16,10 +16,10 @@ export const nav: DefaultTheme.Config['nav'] = [
     ]
   },
   { 
-    text: 'VitePress搭建', 
+    text: 'blog', 
     items: [
-      {text: 'VitePress官网',link: 'https://vitepress.dev/zh/' },
-      {text: '茂茂物语',link: 'https://github.com/maomao1996/vitepress-nav-template' }
+      {text: 'Hexo',link: '/notes/blog/Hexo博客搭建' },
+      {text: 'VitePress',link: '/notes/blog/VitePress搭建' }
     ]
   }
 ]

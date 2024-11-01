@@ -53,5 +53,21 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' }
             ]
           }
+      ],
+      '/notes/blog/': [
+          {
+            text: 'Hexo',
+            collapsed: false,
+            items: [
+              { text: 'Hexo博客搭建', link: '/notes/blog/Hexo博客搭建' }
+            ]
+          },
+          {
+            text: 'VitePress',
+            collapsed: false,
+            items: [
+              { text: 'VitePress搭建', link: '/notes/blog/VitePress搭建' }
+            ]
+          }
       ]
 }
