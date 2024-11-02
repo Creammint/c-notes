@@ -9,7 +9,7 @@
 node_modules
 
 # compiled output
-dist
+#dist
 dist-dev
 build
 cache
