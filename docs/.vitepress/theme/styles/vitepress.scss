@@ -92,3 +92,16 @@ table {
 .dark::view-transition-old(root) {
   z-index: 9999;
 }
+
+svg.fold-btn-icon path {
+  fill: var(--vp-code-tab-text-color);
+  filter: invert(80%);
+}
+
+.vp-doc .outline details:not([open]) > summary {
+  list-style: none;
+}
+
+.vp-doc .outline summary::-webkit-details-marker {
+  display: none;
+}

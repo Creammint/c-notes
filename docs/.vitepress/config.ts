@@ -38,6 +38,18 @@ export default defineConfig({
       label: '目录',
     },
 
+    search: {
+      provider: 'local',
+      options: {
+        _render(src, env, md) {
+          const html = md.render(src, env)
+          if (env.frontmatter?.search === false) return ''
+          if (env.relativePath.startsWith('some/path')) return ''
+          return html
+        }
+      }
+    },
+
     socialLinks: [{ icon: 'github', link: 'https://github.com/Creammint' }],
 
     footer: {

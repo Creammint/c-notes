@@ -1,11 +1,14 @@
 import { h, watch } from 'vue'
-import { useData, EnhanceAppContext } from 'vitepress'
+import { useData, EnhanceAppContext, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
 import { createMediumZoomProvider } from './composables/useMediumZoom'
 
 import MLayout from './components/MLayout.vue'
 import MNavLinks from './components/MNavLinks.vue'
+
+import codeblocksFold from 'vitepress-plugin-codeblocks-fold'; // 导入代码块折叠方法
+import 'vitepress-plugin-codeblocks-fold/style/index.css'; // 导入代码块折叠样式
 
 import './styles/index.scss'
 
@@ -44,6 +47,13 @@ export default {
       )
     }
   },
+  setup() {
+    // 获取前言和路由
+    const { frontmatter } = useData();
+    const route = useRoute();
+    // 基础使用
+    codeblocksFold({ route, frontmatter }, true, 400);
+  }
 }
 
 if (typeof window !== 'undefined') {

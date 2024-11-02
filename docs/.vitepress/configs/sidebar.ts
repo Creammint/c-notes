@@ -13,7 +13,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             text: '软件工具',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'PLSQL 使用技巧、快捷键', link: '/notes/database/oracle/PLSQL 使用技巧、快捷键' }
             ]
@@ -23,7 +23,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: 'Oracle 函数', link: '/notes/database/oracle/Oracle 函数' },
-              { text: 'Oracle 数据操作语法', link: '/notes/database/oracle/Oracle 数据操作语法' }
+              { text: 'DCL,DDL,DML,DQL语言', link: '/notes/database/oracle/DCL、DDL、DML、DQL语言' },
+              { text: 'Oracle 存储过程语句', link: '/notes/database/oracle/Oracle 存储过程语句' }
             ]
           },
           {
@@ -59,7 +60,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: 'Hexo',
             collapsed: false,
             items: [
-              { text: 'Hexo博客搭建', link: '/notes/blog/Hexo博客搭建' }
+              { text: 'Hexo博客搭建', link: '/notes/blog/Hexo博客搭建' },
+              { text: 'Hexo+Butterfly魔改日记(一)', link: '/notes/blog/Hexo+Butterfly魔改日记(一)' }
             ]
           },
           {
