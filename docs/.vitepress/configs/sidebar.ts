@@ -68,7 +68,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: 'VitePress',
             collapsed: false,
             items: [
-              { text: 'VitePress搭建', link: '/notes/blog/VitePress搭建' }
+              { text: 'VitePress搭建', link: '/notes/blog/VitePress搭建' },
+              { text: 'VitePress问题修改', link: '/notes/blog/VitePress问题修改' }
             ]
           }
       ]

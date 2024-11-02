@@ -5,8 +5,6 @@
 .vscode
 .history/
 
-pnpm-lock.yaml
-
 # dependencies
 node_modules
 

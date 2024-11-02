@@ -12,6 +12,10 @@ patchedDependencies:
 importers:
 
   .:
+    dependencies:
+      vitepress-plugin-codeblocks-fold:
+        specifier: ^1.2.28
+        version: 1.2.28
     devDependencies:
       '@femm/prettier':
         specifier: ^1.1.0
@@ -1645,6 +1649,9 @@ packages:
         optional: true
       terser:
         optional: true
+
+  vitepress-plugin-codeblocks-fold@1.2.28:
+    resolution: {integrity: sha512-ilckzzYmTIv3A9t4xiCSsTcYCfzCFzlsycV9nDtgvRTuk7Fy1lNHMZgPOk6ysB7PLFG/R71HsgQC44AZZKL8cw==}
 
   vitepress@1.4.1:
     resolution: {integrity: sha512-C2rQ7PMlDVqgsaHOa0uJtgGGWaGv74QMaGL62lxKbtFkYtosJB5HAfZ8+pEbfzzvLemYaYwaiQdFLBlexK2sFw==}
@@ -3367,6 +3374,8 @@ snapshots:
       '@types/node': 18.18.6
       fsevents: 2.3.3
       sass: 1.69.4
+
+  vitepress-plugin-codeblocks-fold@1.2.28: {}
 
   vitepress@1.4.1(@algolia/client-search@4.20.0)(@types/node@18.18.6)(postcss@8.4.33)(sass@1.69.4)(search-insights@2.9.0):
     dependencies:
