@@ -324,3 +324,32 @@ inject:
 [Butterfly 主题美化-页面毛玻璃效果\_毛玻璃搜索页](https://blog.csdn.net/qq_38870718/article/details/122555421)
 
 :::
+
+## 文章双栏布局
+
+安装插件
+
+```bash
+npm i hexo-butterfly-article-double-row --save
+
+# 或者
+
+cnpm i hexo-butterfly-article-double-row --save
+```
+
+修改站点配置
+
+修改站点根目录下的配置文件 `_config.yml`
+
+```yml
+butterfly_article_double_row:
+  enable: true
+```
+
+## 文章三栏布局
+
+:::tip
+
+[双栏布局首页卡片魔改教程 | Akilar の糖果屋](https://akilar.top/posts/d6b69c49/)
+
+:::

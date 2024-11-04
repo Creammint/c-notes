@@ -61,6 +61,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: 'Hexo博客搭建', link: '/notes/blog/Hexo博客搭建' },
+              { text: 'Hexo+Butterfly主题修改', link: '/notes/blog/Hexo+Butterfly主题修改' },
               { text: 'Hexo+Butterfly魔改日记(一)', link: '/notes/blog/Hexo+Butterfly魔改日记(一)' }
             ]
           },
