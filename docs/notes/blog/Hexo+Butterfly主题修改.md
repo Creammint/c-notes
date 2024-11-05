@@ -288,3 +288,16 @@ hexo generate	// 生成博客
 gulp	// 执行压缩
 hexo deploy		// 若压缩完成无错误，就可以发布了
 ```
+
+## 文章页面关闭侧边栏
+
+```yml
+---
+title: 标签
+date: 2024-10-29 20:18:20
+type: 'tags'
+aside: false
+---
+```
+
+只需要增加代码`aside: false`这样设置后我们的页面就没有侧边栏了；
