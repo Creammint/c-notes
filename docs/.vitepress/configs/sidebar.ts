@@ -73,5 +73,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: 'VitePress问题修改', link: '/notes/blog/VitePress问题修改' }
             ]
           }
+      ],
+      '/notes/knowledge/software': [
+          {
+            text: '常用软件操作',
+            collapsed: false,
+            items: [
+              { text: 'QQ点击链接加好友转换方式', link: '/notes/knowledge/software/qq点击链接加好友转换方式' }
+            ]
+          }
       ]
 }

@@ -268,10 +268,23 @@ hexo clean -> hexo g -> hexo s 在本地查看效果
 
 [hexo-uuid 官方文档](https://github.com/chekun/hexo-uuid)中还介绍了其他配置，可以参考和自行修改。
 
-## Hexo 增加关于、标签、分类、归档页面
+## 增加关于、标签、分类、归档页面
 
 [Hexo 增加关于、标签、分类、归档页面](https://creammint.github.io/posts/39917/)
 
 ## 动态修改网站的标题
 
 [Hexo+Butterfly 动态修改网站的标题](https://creammint.github.io/posts/32273/)
+
+## Hexo+Gulp 压缩图片
+
+[使用 gulp 压缩博客静态资源 | Akilar の糖果屋](https://akilar.top/posts/49b73b87/)
+
+**压缩指令**
+
+```bash
+hexo clean	// 清除public文件夹（缓存）
+hexo generate	// 生成博客
+gulp	// 执行压缩
+hexo deploy		// 若压缩完成无错误，就可以发布了
+```

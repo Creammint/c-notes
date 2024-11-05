@@ -21,5 +21,11 @@ export const nav: DefaultTheme.Config['nav'] = [
       {text: 'Hexo',link: '/notes/blog/Hexo博客搭建' },
       {text: 'VitePress',link: '/notes/blog/VitePress搭建' }
     ]
+  },
+  { 
+    text: '小知识', 
+    items: [
+      {text: '常用软件操作',link: '/notes/knowledge/software/qq点击链接加好友转换方式' }
+    ]
   }
 ]
