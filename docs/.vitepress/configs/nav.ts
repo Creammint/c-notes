@@ -3,6 +3,29 @@ import type { DefaultTheme } from 'vitepress'
 export const nav: DefaultTheme.Config['nav'] = [
   { text: '导航页', link: '/nav/' },
   { 
+    text: '小知识', 
+    items: [
+      {
+        text: '常用软件',
+        items: [
+          {
+            text: '使用教程',
+            link: '/notes/knowledge/software/qq点击链接加好友转换方式'
+          }
+        ]
+      },
+      {
+        text: 'test',
+        items: [
+          {
+            text: 'test',
+            link: '/'
+          }
+        ]
+      }
+    ],
+  },
+  { 
     text: '数据库', 
     items: [
       {text: 'Oracle',link: '/notes/database/oracle/Oracle 简介' },
@@ -20,12 +43,6 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {text: 'Hexo',link: '/notes/blog/Hexo博客搭建' },
       {text: 'VitePress',link: '/notes/blog/VitePress搭建' }
-    ]
-  },
-  { 
-    text: '小知识', 
-    items: [
-      {text: '常用软件操作',link: '/notes/knowledge/software/qq点击链接加好友转换方式' }
     ]
   }
 ]

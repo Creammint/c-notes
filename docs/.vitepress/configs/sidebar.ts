@@ -60,7 +60,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: 'Hexo',
             collapsed: false,
             items: [
-              { text: 'Hexo博客搭建', link: '/notes/blog/Hexo博客搭建' },
+              { text: '博客搭建', link: '/notes/blog/Hexo博客搭建' },
               { text: 'Hexo+Butterfly主题修改', link: '/notes/blog/Hexo+Butterfly主题修改' },
               { text: 'Hexo+Butterfly魔改日记(一)', link: '/notes/blog/Hexo+Butterfly魔改日记(一)' }
             ]
@@ -69,17 +69,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: 'VitePress',
             collapsed: false,
             items: [
-              { text: 'VitePress搭建', link: '/notes/blog/VitePress搭建' },
-              { text: 'VitePress问题修改', link: '/notes/blog/VitePress问题修改' }
+              { text: '博客搭建', link: '/notes/blog/VitePress搭建' },
+              { text: '问题修改', link: '/notes/blog/VitePress问题修改' },
+              { text: '标签外挂', link: '/notes/blog/VitePress的标签外挂' }
+              
             ]
           }
       ],
       '/notes/knowledge/software': [
           {
-            text: '常用软件操作',
+            text: '常用软件',
             collapsed: false,
             items: [
-              { text: 'QQ点击链接加好友转换方式', link: '/notes/knowledge/software/qq点击链接加好友转换方式' }
+              { text: 'QQ点击链接加好友转换方式', link: '/notes/knowledge/software/qq点击链接加好友转换方式' },
+              { text: '油猴怎么玩?', link: '/notes/knowledge/software/油猴怎么玩' }
             ]
           }
       ]

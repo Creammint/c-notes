@@ -184,7 +184,7 @@ export const NAV_DATA: NavData[] = [
         title: '知乎',
         icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
         desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
-        link: 'https://juejin.cn',
+        link: 'https://www.zhihu.com/',
       },
     ],
   },
@@ -219,9 +219,9 @@ export const NAV_DATA: NavData[] = [
       },
       {
         title: '稀土掘金',
-        icon: 'https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/apple-touch-icon.png',
-        desc: '面向全球中文开发者的技术内容分享与交流平台',
-        link: 'https://juejin.cn',
+        icon: 'https://lf-web-assets.juejin.cn/obj/juejin-web/xitu_juejin_web/static/favicons/apple-touch-icon.png',
+        desc: '稀土掘金是一个专注于程序员的社区和技术分享平台，提供各种编程语言、框架、工具、创业、面试等话题的文章、沸点、课程、直播、活动等内容。',
+        link: 'https://juejin.cn/',
       },
       {
         title: '博客园',
