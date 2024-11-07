@@ -61,8 +61,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: '博客搭建', link: '/notes/blog/Hexo博客搭建' },
-              { text: 'Hexo+Butterfly主题修改', link: '/notes/blog/Hexo+Butterfly主题修改' },
-              { text: 'Hexo+Butterfly魔改日记(一)', link: '/notes/blog/Hexo+Butterfly魔改日记(一)' }
+              { text: 'Butterfly主题修改', link: '/notes/blog/Hexo+Butterfly主题修改' },
+              { text: 'Butterfly魔改日记(一)', link: '/notes/blog/Hexo+Butterfly魔改日记(一)' },
+              { text: 'ButterflySEO优化搜索引擎收录', link: '/notes/blog/Hexo+Butterfly SEO优化搜索引擎收录' }
+              
             ]
           },
           {
