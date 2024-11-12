@@ -124,6 +124,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://xiumi.us/#/',
         desc: '用于写公众号文章',
       },
+      
     ],
   },
   {
@@ -145,6 +146,17 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.midjourney.com',
       },
       
+    ],
+  },
+  {
+    title: '办公软件',
+    items: [
+      {
+        icon: 'https://www.1ppt.com/favicon.ico',
+        title: '第一PPT',
+        link: 'https://www.1ppt.com/',
+        desc: '免费的PPT模板',
+      },
     ],
   },
   {
