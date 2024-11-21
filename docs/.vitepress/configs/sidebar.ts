@@ -15,7 +15,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: '软件工具',
             collapsed: true,
             items: [
-              { text: 'PLSQL 使用技巧、快捷键', link: '/notes/database/oracle/PLSQL 使用技巧、快捷键' }
+              { text: 'PLSQL 使用技巧、快捷键', link: '/notes/database/oracle/PLSQL 使用技巧、快捷键' },
+              { text: 'PLSQL 利用explain plan进行sql性能分析', link: '/notes/database/oracle/PLSQL 利用执行计划explain plan进行sql性能分析' }
             ]
           },
           {
@@ -51,6 +52,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: '业务处理',
             collapsed: false,
             items: [
+              { text: 'Java常用代码', link: '/notes/java/Java常用代码' },
               { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' }
             ]
           }
@@ -61,6 +63,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: '博客搭建', link: '/notes/blog/Hexo博客搭建' },
+              { text: 'anzhiyu主题修改', link: '/notes/blog/anzhiyu主题修改' },
               { text: 'Butterfly主题修改', link: '/notes/blog/Hexo+Butterfly主题修改' },
               { text: 'Butterfly魔改日记(一)', link: '/notes/blog/Hexo+Butterfly魔改日记(一)' },
               { text: 'Butterfly优化搜索引擎收录', link: '/notes/blog/Hexo+Butterfly SEO优化搜索引擎收录' }

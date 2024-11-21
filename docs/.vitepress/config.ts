@@ -11,8 +11,8 @@ export default defineConfig({
   base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
 
   lang: 'zh-CN',
-  title: 'Cream薄荷糖',
-  description: 'Cream薄荷糖的成长之路，包含数据库知识、Java笔记、编程常用工具等',
+  title: '薄荷の云笔记',
+  description: '薄荷的成长之路，包含数据库知识、后端笔记、编程常用工具和日常生活记录等',
   head,
 
   lastUpdated: true,
@@ -54,7 +54,7 @@ export default defineConfig({
 
     footer: {
       //message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: '© 2024 Cream薄荷糖',
+      copyright: '© 2024 薄荷',
     },
 
     lastUpdated: {

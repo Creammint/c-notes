@@ -3,12 +3,12 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: Cream薄荷糖
-  text: A small website
-  tagline: 我姓唐却塘塞不了你的心
+  name: 薄荷の云笔记
+  text:
+  tagline: 函数应该做一件事。<br/>做好这件事，只能做这一件事。
   image:
     src: https://y.creammint.cn/basis/build-img/avatar_2.png
-    alt: Cream薄荷糖
+    alt: 薄荷
   actions:
     - text: 我的博客
       link: https://creammint.cn/

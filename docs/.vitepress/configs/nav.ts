@@ -28,7 +28,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   { 
     text: '数据库', 
     items: [
-      {text: 'Oracle',link: '/notes/database/oracle/Oracle 简介' },
+      {text: 'Oracle',link: '/notes/database/oracle/Oracle 函数' },
       {text: 'MySQL',link: '/notes/database/mysql/MySQL 数据库安装' }
     ]
   },
