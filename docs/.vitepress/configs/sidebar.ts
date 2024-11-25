@@ -33,6 +33,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: 'Oracle 查看表空间', link: '/notes/database/oracle/Oracle 查看表空间' },
+              { text: 'Oracle 慢查询排查步骤', link: '/notes/database/oracle/Oracle 慢查询排查步骤' },
               { text: 'Oracle 查看处理死锁', link: '/notes/database/oracle/Oracle 查看处理死锁' },
               { text: 'Oracle 查看表或视图的定义语句', link: '/notes/database/oracle/Oracle 查看表或视图的定义语句' }
             ]

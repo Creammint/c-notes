@@ -47,6 +47,14 @@ select a.object_name,b.session_id,c.serial#,c.program,c.username,c.command,c.mac
 from all_objects a,v$locked_object b,v$session c where a.object_id=b.object_id and c.sid=b.session_id;
 ```
 
+查看执行中的 job 的那些对象被锁
+
+```sql
+select a.object_name,b.session_id,c.serial#,c.program,c.username,c.command,c.machine,c.lockwait
+from all_objects a,v$locked_object b,v$session c where a.object_id=b.object_id and c.sid=b.session_id
+and b.session_id in (select sid from dba_jobs_running where job in (824,1044));
+```
+
 2、查询锁表原因以及 sid、serial#
 
 ```sql
@@ -61,6 +69,44 @@ order by sid, s.serial#;
 ```sql
 --sid,serial对应2步骤的值
 alter system kill session 'sid,serial#';
+```
+
+## 捕捉 Oracle 慢 SQL
+
+```sql
+select * from gv$sqlarea t where t.OPTIMIZER_MODE='ALL_ROWS' order by disk_reads desc
+```
+
+慢 SQL 查询
+
+```sql
+--慢查询耗时
+select *
+ from (select sa.SQL_TEXT "执行 SQL",
+        sa.EXECUTIONS "执行次数",
+        round(sa.ELAPSED_TIME / 1000000, 2) "总执行时间",
+        round(sa.ELAPSED_TIME / 1000000 / sa.EXECUTIONS, 2) "平均执行时间",
+        sa.COMMAND_TYPE,
+        sa.PARSING_USER_ID "用户ID",
+        u.username "用户名",
+        sa.HASH_VALUE
+     from v$sqlarea sa
+     left join all_users u
+      on sa.PARSING_USER_ID = u.user_id
+     where sa.EXECUTIONS > 0
+     order by (sa.ELAPSED_TIME / sa.EXECUTIONS) desc)
+ where rownum <= 50;
+
+--查询次数最多的 SQL
+select *
+ from (select s.SQL_TEXT,
+        s.EXECUTIONS "执行次数",
+        s.PARSING_USER_ID "用户名",
+        rank() over(order by EXECUTIONS desc) EXEC_RANK
+     from v$sql s
+     left join all_users u
+      on u.USER_ID = s.PARSING_USER_ID) t
+ where exec_rank <= 100;
 ```
 
 ## 问题
