@@ -35,7 +35,8 @@ export const nav: DefaultTheme.Config['nav'] = [
   { 
     text: 'Java', 
     items: [
-      {text: 'Java',link: '/notes/java/Excel文件上传' }
+      {text: 'Java',link: '/notes/java/Excel文件上传' },
+      {text: 'Git',link: '/notes/java/git/git commit 代码提交规范' }
     ]
   },
   { 

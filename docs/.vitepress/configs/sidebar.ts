@@ -50,11 +50,18 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
       '/notes/java/': [
           {
-            text: '业务处理',
+            text: 'Java',
             collapsed: false,
             items: [
               { text: 'Java常用代码', link: '/notes/java/Java常用代码' },
               { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' }
+            ]
+          },
+          {
+            text: 'Git',
+            collapsed: false,
+            items: [
+              { text: 'git commit 代码提交规范', link: '/notes/java/git/git commit 代码提交规范' }
             ]
           }
       ],
