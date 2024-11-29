@@ -89,7 +89,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
           }
       ],
-      '/notes/knowledge/software': [
+      '/notes/knowledge': [
           {
             text: '常用软件',
             collapsed: false,
