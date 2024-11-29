@@ -97,6 +97,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: 'QQ点击链接加好友转换方式', link: '/notes/knowledge/software/qq点击链接加好友转换方式' },
               { text: '油猴怎么玩?', link: '/notes/knowledge/software/油猴怎么玩' }
             ]
+          },
+          {
+            text: 'AI相关',
+            collapsed: false,
+            items: [
+              { text: 'AI操作技巧', link: '/notes/knowledge/AI/AI操作技巧' },
+            ]
           }
       ]
 }

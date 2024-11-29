@@ -22,15 +22,6 @@ export const nav: DefaultTheme.Config['nav'] = [
             link: '/notes/knowledge/AI/AI操作技巧'
           }
         ]
-      },
-      {
-        text: 'test',
-        items: [
-          {
-            text: 'test',
-            link: '/'
-          }
-        ]
       }
     ],
   },
