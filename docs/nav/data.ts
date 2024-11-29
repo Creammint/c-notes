@@ -118,12 +118,6 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.pexels.com/zh-cn/',
         desc: '免费素材图片',
       },
-      {
-        icon: 'https://xiumi.us/images/b80cd8.xiumi_logo_40.png',
-        title: '秀米XIUMI',
-        link: 'https://xiumi.us/#/',
-        desc: '用于写公众号文章',
-      },
       
     ],
   },
@@ -141,22 +135,16 @@ export const NAV_DATA: NavData[] = [
         link: 'https://kimi.moonshot.cn/',
       },
       {
+        icon: 'https://ai.gptprompt.cn/favicon.ico',
+        title: 'ChatGPT指令生成器',
+        link: 'https://ai.gptprompt.cn/zh',
+      },
+      {
         icon: 'https://www.midjourney.com/apple-touch-icon.png',
         title: 'Midjourney（绘画）',
         link: 'https://www.midjourney.com',
       },
       
-    ],
-  },
-  {
-    title: '办公软件',
-    items: [
-      {
-        icon: 'https://www.1ppt.com/favicon.ico',
-        title: '第一PPT',
-        link: 'https://www.1ppt.com/',
-        desc: '免费的PPT模板',
-      },
     ],
   },
   {
@@ -167,6 +155,18 @@ export const NAV_DATA: NavData[] = [
         title: '微信公众平台',
         link: 'https://mp.weixin.qq.com/',
         desc: '微信公众平台',
+      },
+      {
+        icon: 'https://xiumi.us/images/b80cd8.xiumi_logo_40.png',
+        title: '秀米XIUMI',
+        link: 'https://xiumi.us/#/',
+        desc: '用于写公众号文章',
+      },
+      {
+        icon: 'https://www.135editor.com/favicon.ico',
+        title: '135编辑器',
+        link: 'https://www.135editor.com/',
+        desc: '用于写公众号文章，广告比较多',
       },
       {
         icon: 'https://res.wx.qq.com/t/wx_fed/finder/helper/finder-helper-web/res/favicon-v2.ico',
@@ -197,6 +197,17 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
         desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
         link: 'https://www.zhihu.com/',
+      },
+    ],
+  },
+  {
+    title: '办公软件',
+    items: [
+      {
+        icon: 'https://www.1ppt.com/favicon.ico',
+        title: '第一PPT',
+        link: 'https://www.1ppt.com/',
+        desc: '免费的PPT模板',
       },
     ],
   },

@@ -71,6 +71,35 @@ order by sid, s.serial#;
 alter system kill session 'sid,serial#';
 ```
 
+## 查询执行中的会话
+
+```sql
+SELECT
+    s.sid,                                 -- 会话的 SID（唯一标识符）
+    s.serial#,                             -- 会话的 Serial#，用于终止会话时需要
+    s.username,                            -- 执行 SQL 的用户名
+    t.sql_id,                              -- SQL 语句的唯一标识符
+    t.cpu_time / 1000000 AS cpu_time_seconds, -- SQL 的累计 CPU 消耗时间（秒）
+    t.elapsed_time / 1000000 AS elapsed_time_seconds, -- SQL 的总执行时间（秒）
+    t.executions,                          -- SQL 执行的次数
+    (t.elapsed_time / t.executions) / 1000000 AS avg_elapsed_time_seconds, -- 平均每次执行时间（秒）
+    t.elapsed_time / 1000000 AS max_elapsed_time_seconds, -- 最大执行时间（需要统计时提供完整信息）
+    t.rows_processed,                      -- SQL 语句影响的总行数（如果可用）
+    t.sql_text                             -- SQL 的文本内容
+FROM
+    v$session s
+JOIN
+    v$sql t
+ON
+    s.sql_id = t.sql_id                    -- 将会话与其正在执行的 SQL 关联
+WHERE
+    s.status = 'ACTIVE'                    -- 筛选当前处于活跃状态的会话
+    AND s.type = 'USER'                    -- 排除后台进程，仅查看用户会话
+    AND t.executions > 0                   -- 确保统计信息有效，避免除零错误
+ORDER BY
+    t.cpu_time DESC                     -- 按 CPU 时间从高到低排序
+```
+
 ## 捕捉 Oracle 慢 SQL
 
 ```sql

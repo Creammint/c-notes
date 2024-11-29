@@ -15,6 +15,15 @@ export const nav: DefaultTheme.Config['nav'] = [
         ]
       },
       {
+        text: 'AI',
+        items: [
+          {
+            text: 'AI相关',
+            link: '/notes/knowledge/AI/AI操作技巧'
+          }
+        ]
+      },
+      {
         text: 'test',
         items: [
           {
