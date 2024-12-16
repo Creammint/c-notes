@@ -33,10 +33,21 @@ export const nav: DefaultTheme.Config['nav'] = [
     ]
   },
   { 
-    text: 'Java', 
+    text: '软件开发', 
     items: [
-      {text: 'Java',link: '/notes/java/Excel文件上传' },
-      {text: 'Git',link: '/notes/java/git/git commit 代码提交规范' }
+      {
+        text: '后端',
+        items: [
+          {text: 'Java',link: '/notes/java/Excel文件上传'},
+          {text: 'Git',link: '/notes/java/git/git commit 代码提交规范'}
+        ]
+      },
+      {
+        text: '微信小程序',
+        items: [
+          {text: '微信小程序',link: '/notes/java/wechat/微信小程序'},
+        ]
+      },
     ]
   },
   { 

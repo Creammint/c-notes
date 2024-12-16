@@ -64,6 +64,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             items: [
               { text: 'git commit 代码提交规范', link: '/notes/java/git/git commit 代码提交规范' }
             ]
+          },
+          {
+            text: 'wechat',
+            collapsed: false,
+            items: [
+              { text: '微信小程序', link: '/notes/java/wechat/微信小程序' }
+            ]
           }
       ],
       '/notes/blog/': [
