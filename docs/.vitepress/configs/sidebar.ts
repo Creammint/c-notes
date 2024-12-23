@@ -55,7 +55,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: 'Java常用代码', link: '/notes/java/Java常用代码' },
-              { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' }
+              { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' },
+              { text: '文件流操作', link: '/notes/java/文件流操作' },
+              { text: '注解解读', link: '/notes/java/注解解读' },
             ]
           },
           {
@@ -107,10 +109,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
           },
           {
-            text: 'AI相关',
+            text: 'AI写作(自媒体)',
             collapsed: false,
             items: [
               { text: 'AI操作技巧', link: '/notes/knowledge/AI/AI操作技巧' },
+              { text: '自媒体', link: '/notes/knowledge/AI/自媒体' },
             ]
           }
       ]

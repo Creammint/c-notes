@@ -18,7 +18,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         text: 'AI',
         items: [
           {
-            text: 'AI相关',
+            text: 'AI写作(自媒体)',
             link: '/notes/knowledge/AI/AI操作技巧'
           }
         ]
