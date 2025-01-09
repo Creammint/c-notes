@@ -51,12 +51,21 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
       '/notes/java/': [
           {
+            text: '开发工具',
+            collapsed: true,
+            items: [
+              { text: 'IDEA快捷键', link: '/notes/java/tools/IDEA快捷键' },
+              { text: 'IDEA软件操作', link: '/notes/java/tools/IDEA软件操作' },
+            ]
+          },
+          {
             text: 'Java',
             collapsed: false,
             items: [
+              { text: '注解解读', link: '/notes/java/注解解读' },
               { text: 'Java常用代码', link: '/notes/java/Java常用代码' },
               { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' },
-              { text: '注解解读', link: '/notes/java/注解解读' },
+              { text: 'API接口调用同步', link: '/notes/java/API接口调用同步' },
             ]
           },
           {
@@ -68,9 +77,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             text: 'wechat',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: '微信小程序', link: '/notes/java/wechat/微信小程序' }
+            ]
+          },
+          {
+            text: 'Docker',
+            collapsed: true,
+            items: [
+              { text: 'Docker命令', link: '/notes/java/docker/Docker命令' }
             ]
           }
       ],
@@ -111,8 +127,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: 'AI写作(自媒体)',
             collapsed: false,
             items: [
-              { text: 'AI操作技巧', link: '/notes/knowledge/AI/AI操作技巧' },
-              { text: '自媒体', link: '/notes/knowledge/AI/自媒体' },
+              { text: '操作技巧', link: '/notes/knowledge/AI/AI操作技巧' },
+              { text: '文章编写技巧', link: '/notes/knowledge/AI/自媒体' },
             ]
           }
       ]

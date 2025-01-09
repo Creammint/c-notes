@@ -15,10 +15,10 @@ export const nav: DefaultTheme.Config['nav'] = [
         ]
       },
       {
-        text: 'AI',
+        text: 'AI相关',
         items: [
           {
-            text: 'AI写作(自媒体)',
+            text: '写作(自媒体)',
             link: '/notes/knowledge/AI/AI操作技巧'
           }
         ]
@@ -38,14 +38,17 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '后端',
         items: [
+          {text: 'Tools',link: '/notes/java/tools/IDEA软件操作'},
           {text: 'Java',link: '/notes/java/Excel文件上传'},
-          {text: 'Git',link: '/notes/java/git/git commit 代码提交规范'}
+          {text: 'Git',link: '/notes/java/git/git commit 代码提交规范'},
+          {text: 'Docker',link: '/notes/java/docker/Docker命令'}
+          
         ]
       },
       {
         text: '微信小程序',
         items: [
-          {text: '微信小程序',link: '/notes/java/wechat/微信小程序'},
+          {text: 'wechat',link: '/notes/java/wechat/微信小程序'},
         ]
       },
     ]
