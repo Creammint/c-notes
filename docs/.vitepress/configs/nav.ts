@@ -54,6 +54,12 @@ export const nav: DefaultTheme.Config['nav'] = [
     ]
   },
   { 
+    text: 'vlog', 
+    items: [
+      {text: '我的小计划',link: '/notes/vlog/一个月减肥计划表' }
+    ]
+  },
+  { 
     text: 'blog', 
     items: [
       {text: 'Hexo',link: '/notes/blog/Hexo博客搭建' },

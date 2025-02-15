@@ -113,4 +113,6 @@ private boolean isValidTemplate(Row titleRow) {
 
 ![image-20241115141443645](https://y.creammint.cn/articles/images/image-20241115141443645.png)
 
-## 枚举
+## 接口对接
+
+[java 后端对接外部系统（HttpClient HttpPost）\_java 做接口给外部系统调用](https://blog.csdn.net/zhanghengchao123/article/details/122369863)

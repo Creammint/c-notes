@@ -131,5 +131,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '文章编写技巧', link: '/notes/knowledge/AI/自媒体' },
             ]
           }
+      ],
+      '/notes/vlog': [
+          {
+            text: '我的小计划',
+            collapsed: false,
+            items: [
+              { text: '减肥计划', link: '/notes/vlog/一个月减肥计划表' }
+            ]
+          }
       ]
 }

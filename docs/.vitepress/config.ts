@@ -54,7 +54,7 @@ export default defineConfig({
 
     footer: {
       //message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: '© 2024 薄荷',
+      copyright: '© 2024 - 2025 薄荷',
     },
 
     lastUpdated: {
