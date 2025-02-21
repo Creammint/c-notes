@@ -4,6 +4,10 @@
 
 [安知鱼主题官方文档](https://docs.anheyu.com/)
 
+## 标签外挂
+
+[安知鱼主题标签 Tag Plugins](https://blog.anheyu.com/posts/d50a.html#上标标签-tip)
+
 ## Vercel 部署 Twikoo
 
 [Vercel 部署 Twikoo 评论系统](https://blog.kevinchu.top/2023/09/19/vercel-deploy-twikoo/)
