@@ -10,16 +10,10 @@ export const NAV_DATA: NavData[] = [
     title: '博客相关',
     items: [
       {
-        icon: 'https://y.creammint.cn/basis/build-img/icon.svg',
-        title: '个人博客',
-        desc: '日常笔记记录（零零散散啥都记系列）',
+        icon: 'https://www.creammint.cn/favicon.ico',
+        title: '程序员薄荷',
+        desc: '函数应该做一件事，做好这件事，只能做这件事。',
         link: 'https://creammint.cn/',
-      },
-      {
-        icon: 'https://y.creammint.cn/basis/build-img/icon.svg',
-        title: '薄荷糖毕设',
-        desc: '毕业设计相关的站点',
-        link: 'https://bs.creammint.cn/',
       },
       {
         icon: 'https://y.creammint.cn/basis/build-img/note.png',
