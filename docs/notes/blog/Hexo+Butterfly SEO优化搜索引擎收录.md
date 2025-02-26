@@ -178,6 +178,84 @@ https://你的域名/baidusitemap.xml
 
 后续慢慢等收录吧，百度收录比较慢。
 
+## 必应收录
+
+地址：[Bing Webmaster Tools - Bing Webmaster Tools](https://www.bing.com/webmasters/home)
+
+1. 添加自己的网站域名
+
+![image-20250226182548109](https://y.creammint.cn/articles/images/image-20250226182548109.png)
+
+2. 验证网站，选择`html标记`验证
+
+![image-20250226193151791](https://y.creammint.cn/articles/images/image-20250226193151791.png)
+
+hexo 主题中添加
+
+```xml
+site_verification:
+  - name: msvalidate.01 # 必应收录
+    content:   # 你对应的content信息
+```
+
+## 谷歌收录
+
+地址：[请求 Google 重新抓取您的网站 | Google 搜索中心](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?utm_source=wmx&utm_medium=deprecation-pane&utm_content=submit-url&hl=zh-cn)
+
+1. 添加自己的域名
+
+![image-20250226194051074](https://y.creammint.cn/articles/images/image-20250226194051074.png)
+
+![image-20250226194145713](https://y.creammint.cn/articles/images/image-20250226194145713.png)
+
+2. 验证网站，选择`html标记`验证
+
+![image-20250226193938274](https://y.creammint.cn/articles/images/image-20250226193938274.png)
+
+```xml
+site_verification:
+  - name: google-site-verification # 谷歌收录
+    content: # 你的content
+```
+
+## 360 收录
+
+地址：[360 站长平台-站点管理 (so.com)](https://zhanzhang.so.com/sitetool/site_manage)
+
+1. 添加站点
+
+![image-20250226194856645](https://y.creammint.cn/articles/images/image-20250226194856645.png)
+
+2. 选择代码验证
+
+![image-20250226194930409](https://y.creammint.cn/articles/images/image-20250226194930409.png)
+
+```xml
+site_verification:
+	- name: 360-site-verification # 360收录
+      content: # 你的content
+```
+
+## 搜狗收录
+
+地址：[搜狗资源平台\_公平开放的交流平台 (sogou.com)](https://zhanzhang.sogou.com/?forceredirect=1)
+
+1. 添加你的站点域名
+
+![image-20250226195808835](https://y.creammint.cn/articles/images/image-20250226195808835.png)
+
+2. 选择`html标签`验证
+
+![image-20250226200010498](https://y.creammint.cn/articles/images/image-20250226200010498.png)
+
+```xml
+site_verification:
+  - name: sogou_site_verification # 搜狗收录
+    content: # 你的content
+```
+
+3. 需要填一大堆信息，如：icp 备案号，身份证、手机号等；
+
 :::tip
 
 参考：[Butterfly 进阶篇（一） - SEO 优化搜索引擎收录 | 悠悠の哉](https://qmike.top/posts/2a1b5a62)
