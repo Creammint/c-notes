@@ -38,10 +38,10 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '后端',
         items: [
-          {text: 'Tools',link: '/notes/java/tools/IDEA软件操作'},
+          {text: 'Tools',link: '/notes/middleware/tools/IDEA软件操作'},
           {text: 'Java',link: '/notes/java/Excel文件上传'},
-          {text: 'Git',link: '/notes/java/git/git commit 代码提交规范'},
-          {text: 'Docker',link: '/notes/java/docker/Docker命令'}
+          {text: 'Git',link: '/notes/middleware/git/git commit 代码提交规范'},
+          {text: 'Docker',link: '/notes/middleware/docker/Docker命令'}
           
         ]
       },

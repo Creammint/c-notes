@@ -10,10 +10,8 @@ hero:
     src: https://y.creammint.cn/basis/build-img/avatar_2.png
     alt: 薄荷
   actions:
-    - text: 我的博客
-      link: https://creammint.cn/
-    - text: 薄荷糖毕设
-      link: https://bs.creammint.cn/
+    - text: 个人博客
+      link: https://www.creammint.cn/
       theme: alt
     - text: 导航页
       link: /nav/

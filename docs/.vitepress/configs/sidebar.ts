@@ -49,44 +49,60 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
           }
       ],
-      '/notes/java/': [
+      '/notes/middleware/': [
           {
             text: '开发工具',
             collapsed: true,
             items: [
-              { text: 'IDEA快捷键', link: '/notes/java/tools/IDEA快捷键' },
-              { text: 'IDEA软件操作', link: '/notes/java/tools/IDEA软件操作' },
-            ]
-          },
-          {
-            text: 'Java',
-            collapsed: false,
-            items: [
-              { text: '注解解读', link: '/notes/java/注解解读' },
-              { text: 'Java常用代码', link: '/notes/java/Java常用代码' },
-              { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' },
-              { text: 'API接口调用同步', link: '/notes/java/API接口调用同步' },
+              { text: 'IDEA快捷键', link: '/notes/middleware/tools/IDEA快捷键' },
+              { text: 'IDEA软件操作', link: '/notes/middleware/tools/IDEA软件操作' },
             ]
           },
           {
             text: 'Git',
             collapsed: false,
             items: [
-              { text: 'git commit 代码提交规范', link: '/notes/java/git/git commit 代码提交规范' }
+              { text: 'git commit 代码提交规范', link: '/notes/middleware/git/git commit 代码提交规范' }
             ]
           },
           {
             text: 'wechat',
             collapsed: true,
             items: [
-              { text: '微信小程序', link: '/notes/java/wechat/微信小程序' }
+              { text: '微信小程序', link: '/notes/middleware/wechat/微信小程序' }
             ]
           },
           {
             text: 'Docker',
             collapsed: true,
             items: [
-              { text: 'Docker命令', link: '/notes/java/docker/Docker命令' }
+              { text: 'Docker命令', link: '/notes/middleware/docker/Docker命令' }
+            ]
+          }
+      ],
+      '/notes/java/': [
+          {
+            text: 'Java基础',
+            collapsed: false,
+            items: [
+              { text: '注解解读', link: '/notes/java/注解解读' },
+              { text: 'Java常用代码', link: '/notes/java/Java常用代码' }
+            ]
+          },
+          {
+            text: '文件流操作',
+            collapsed: false,
+            items: [
+              { text: 'Excel文件上传', link: '/notes/java/Excel文件上传' },
+              { text: 'Excel导出设置复杂模板', link: '/notes/java/Excel导出设置复杂模板' },
+              { text: 'Excel转Pdf', link: '/notes/java/Excel转Pdf' },
+            ]
+          },
+          {
+            text: 'API调用',
+            collapsed: false,
+            items: [
+              { text: 'API接口调用同步', link: '/notes/java/API接口调用同步' }
             ]
           }
       ],
