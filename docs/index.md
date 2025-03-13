@@ -10,7 +10,7 @@ hero:
     src: https://y.creammint.cn/basis/build-img/avatar_2.png
     alt: 薄荷
   actions:
-    - text: 个人博客
+    - text: 个人网站
       link: https://www.creammint.cn/
       theme: alt
     - text: 导航页

@@ -15,11 +15,11 @@ export const nav: DefaultTheme.Config['nav'] = [
         ]
       },
       {
-        text: 'AI相关',
+        text: '自媒体',
         items: [
           {
-            text: '写作(自媒体)',
-            link: '/notes/knowledge/AI/AI操作技巧'
+            text: '自媒体写作',
+            link: '/notes/knowledge/wemedia/文章编写技巧'
           }
         ]
       }

@@ -3,28 +3,27 @@ title: Excel文件上传
 createTime: 2024/09/20 18:06:34
 permalink: /java/skg8dhyj/
 ---
-# Excel文件上传后端
+
+# Excel 文件上传后端
 
 ## 业务背景
 
-人员大类管理模块：通过Excel批量导入，如有报错则需要导出报错信息；
+人员大类管理模块：通过 Excel 批量导入，如有报错则需要导出报错信息；
 
 1. 判断表头是否正确 isValidTemplate() 方法，判断导入文件是否为空或只有表头；
 
-2. 判断Excel的单元格数据是否填写规范，排除null、数据类型不规范等，记录错误信息；
+2. 判断 Excel 的单元格数据是否填写规范，排除 null、数据类型不规范等，记录错误信息；
 
 3. 判断人员和大类信息是否在当前数据库中存在，记录错误信息；
 
-   > 1. 数据量小：人员信息和大类信息单独查出来，放到 list集合中，然后跟file中的数据对比；
+   > 1. 数据量小：人员信息和大类信息单独查出来，放到 list 集合中，然后跟 file 中的数据对比；
    > 2. 数据量大：单行去对比
 
-4. 如有错误信息，则把错误信息存到redis中，设置存储时间为5min；用户导出错误信息Excel表格；
+4. 如有错误信息，则把错误信息存到 redis 中，设置存储时间为 5min；用户导出错误信息 Excel 表格；
 
 5. 最后导入到数据库中；
 
-
-
-## 依赖包pom.xml
+## 依赖包 pom.xml
 
 ```xml
 <!-- Web 相关 -->
@@ -41,8 +40,6 @@ permalink: /java/skg8dhyj/
 </dependency>
 ```
 
-
-
 ## 实体类
 
 在需要导出的字段上增加注解 `@ExcelProperty("字段名")`
@@ -51,7 +48,7 @@ permalink: /java/skg8dhyj/
 
 如果某个字段不需要映射到数据库列，可以通过 `@TableField` 来忽略它。
 
-```java 
+```java
 @Schema(description = "管理后台 - 大类人员管理企划 Response VO")
 @Data
 @Builder
@@ -121,13 +118,9 @@ public class BigCategoriesPlanRespVO extends BaseDO {
 }
 ```
 
+## Controller 层
 
-
-
-
-## Controller层
-
-```java 
+```java
 @PostMapping("/import")
 @Operation(summary = "导入大类人员管理企划")
 @Parameters({
@@ -151,15 +144,13 @@ public void exportError(HttpServletResponse response) throws IOException {
 }
 ```
 
+## Service 层
 
-
-## Service层
-
-### Excel导入
+### Excel 导入
 
 `STATUS_NOT_EXISTS` 、`BIG_CATEGORIES_ERROR` 等这些字段属于枚举类，自己定义错误信息，可以自己填写；
 
-```java 
+```java
 private static final Logger log = LoggerFactory.getLogger(BigCategoriesPlanServiceImpl.class);
 
 @Resource
@@ -411,7 +402,7 @@ private boolean isValidTemplate(Row titleRow) {
 }
 ```
 
-### Excel导出失败信息
+### Excel 导出失败信息
 
 当用户导入失败时，需要导出错误清单；
 
@@ -419,7 +410,7 @@ private boolean isValidTemplate(Row titleRow) {
 
 ![image-20240906162624335](https://y.creammint.cn/articles/images/image-20240906162624335.png)
 
-```java 
+```java
  @Override
 public List<BigCategoriesPlanRespErrorVO> exportBigCategoriesPlanErrorList(HttpServletResponse response) {
     // 定义 Redis 的 key
@@ -438,8 +429,6 @@ public List<BigCategoriesPlanRespErrorVO> exportBigCategoriesPlanErrorList(HttpS
 }
 ```
 
-
-
 ## 页面展示
 
 前端功能展示：
@@ -449,3 +438,28 @@ public List<BigCategoriesPlanRespErrorVO> exportBigCategoriesPlanErrorList(HttpS
 导入模板：
 
 ![image-20240906162245031](https://y.creammint.cn/articles/images/image-20240906162245031.png)
+
+## 本地导出
+
+### pom.xml
+
+```xml
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>easyexcel</artifactId>
+    <version>3.3.2</version>
+</dependency>
+```
+
+### 代码
+
+```java
+// 定义导出文件的路径
+String fileName = "StoreInventorySaleRank.xlsx";
+
+// 使用 EasyExcel 导出数据
+EasyExcel.write(fileName, StoreInventorySaleRankDO.class)
+    .registerWriteHandler(new LongestMatchColumnWidthStyleStrategy()) // 自动调整列宽
+    .sheet("Store Inventory Sale Rank") // 设置 Sheet 名称
+    .doWrite(list); // 写入数据
+```

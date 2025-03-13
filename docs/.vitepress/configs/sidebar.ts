@@ -141,11 +141,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
           },
           {
-            text: 'AI写作(自媒体)',
+            text: '自媒体',
             collapsed: false,
             items: [
-              { text: '操作技巧', link: '/notes/knowledge/AI/AI操作技巧' },
-              { text: '文章编写技巧', link: '/notes/knowledge/AI/自媒体' },
+              { text: 'AI提示词', link: '/notes/knowledge/wemedia/AI提示词' },
+              { text: '文章编写技巧', link: '/notes/knowledge/wemedia/文章编写技巧' },
+              { text: '推荐做的副业项目', link: '/notes/knowledge/wemedia/推荐做的副业项目' },
             ]
           }
       ],
