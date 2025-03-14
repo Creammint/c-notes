@@ -750,6 +750,54 @@ SELECT ename, sal, deptno, RATIO_TO_REPORT(sal) OVER (PARTITION BY deptno) AS ra
 FROM emp;
 ```
 
+### RANK()/DENSE_RANK()
+
+#### RANK()
+
+`RANK()` 函数为每一行分配一个唯一的排名值。如果有相同的值（并列），它们会获得相同的排名，但后续的排名会跳过相应的位置。
+
+```sql
+SELECT
+    value,
+    RANK() OVER (ORDER BY value DESC) AS rank
+FROM
+    your_table;
+```
+
+```
+value | rank
+------|------
+100   | 1
+90    | 2
+90    | 2
+80    | 4
+```
+
+注意：`80` 的排名是 `4`，而不是 `3`，因为有两个 `90` 并列排名为 `2`，所以 `80` 的排名跳过了 `3`。
+
+#### DENSE_RANK()
+
+`DENSE_RANK()` 函数也为每一行分配一个唯一的排名值。与 `RANK()` 不同的是，如果有相同的值（并列），它们会获得相同的排名，但后续的排名不会跳过位置。
+
+```sql
+SELECT
+    value,
+    DENSE_RANK() OVER (ORDER BY value DESC) AS dense_rank
+FROM
+    your_table;
+```
+
+```
+value | dense_rank
+------|-----------
+100   | 1
+90    | 2
+90    | 2
+80    | 3
+```
+
+注意：`80` 的排名是 `3`，而不是 `4`，因为 `DENSE_RANK()` 不会跳过排名位置。
+
 ### CASE
 
 流程控制语句 流程控制函数
