@@ -129,6 +129,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '标签外挂', link: '/notes/blog/VitePress的标签外挂' }
               
             ]
+          },
+          {
+            text: '环境配置',
+            collapsed: false,
+            items: [
+              { text: 'vercel配置', link: '/notes/blog/vercel配置' },
+              
+            ]
           }
       ],
       '/notes/knowledge': [
