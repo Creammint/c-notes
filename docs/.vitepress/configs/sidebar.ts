@@ -158,12 +158,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
           }
       ],
-      '/notes/vlog': [
+      '/notes/about': [
           {
-            text: '我的小计划',
+            text: '关于我',
             collapsed: false,
             items: [
-              { text: '减肥计划', link: '/notes/vlog/一个月减肥计划表' }
+              { text: '关于我', link: '/notes/about/关于我' },
+              { text: '个人简历',link: '/notes/about/个人简历' }
+            ]
+          },
+          {
+            text: 'vlog',
+            collapsed: false,
+            items: [
+              { text: '减肥计划', link: '/notes/about/vlog/一个月减肥计划表' },
             ]
           }
       ]
