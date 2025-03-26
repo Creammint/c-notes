@@ -172,7 +172,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: '减肥计划', link: '/notes/about/vlog/一个月减肥计划表' },
-              { text: '关于我', link: '/notes/about/双月湾2天1夜高效游玩路线' },
+              { text: '双月湾2天1夜高效游玩路线', link: '/notes/about/vlog/双月湾2天1夜高效游玩路线' },
             ]
           }
       ]
