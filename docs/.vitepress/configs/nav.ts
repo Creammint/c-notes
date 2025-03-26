@@ -72,7 +72,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: 'vlog',
         items: [
-          {text: '我的生活',link: '/notes/about/vlog/一个月减肥计划表'},
+          {text: '我的生活',link: '/notes/about/vlog/双月湾2天1夜高效游玩路线'},
         ]
       },
     ]
