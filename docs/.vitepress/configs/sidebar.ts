@@ -86,7 +86,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               { text: '注解解读', link: '/notes/java/注解解读' },
-              { text: 'Java常用代码', link: '/notes/java/Java常用代码' }
+              { text: 'Java常用代码', link: '/notes/java/Java常用代码' },
+              { text: '工具类', link: '/notes/java/工具类' },
             ]
           },
           {
