@@ -54,6 +54,12 @@ export const nav: DefaultTheme.Config['nav'] = [
     ]
   },
   { 
+    text: '游戏', 
+    items: [
+      {text: '跃动小子',link: '/notes/games/yuedongxiaozi/index' },
+    ]
+  },
+  { 
     text: 'blog', 
     items: [
       {text: 'Hexo',link: '/notes/blog/Hexo博客搭建' },

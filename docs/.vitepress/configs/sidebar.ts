@@ -176,5 +176,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '双月湾2天1夜高效游玩路线', link: '/notes/about/vlog/双月湾2天1夜高效游玩路线' },
             ]
           }
+      ],
+      '/notes/games': [
+          {
+            text: '游戏',
+            collapsed: false,
+            items: [
+              { text: '跃动小子', link: '/notes/games/yuedongxiaozi/index' },
+            ]
+          },
       ]
 }

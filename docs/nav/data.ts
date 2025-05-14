@@ -549,4 +549,29 @@ export const NAV_DATA: NavData[] = [
       },
     ],
   },
+  {
+    title: '羞羞的网站',
+    items: [
+      {
+        icon: 'https://heiliao365.com/favicon.ico',
+        title: '黑料不打祥',
+        link: 'https://appeal.lybzjff.xyz/',
+      },
+      {
+        icon: 'https://ppp.porn/favicon.ico',
+        title: 'PPP.Porn',
+        link: 'https://ppp.porn/pp1/',
+      },
+      {
+        icon: 'https://cn.pornhub.com/favicon.ico',
+        title: 'Pornhub',
+        link: 'https://cn.pornhub.com/',
+      },
+      {
+        icon: 'https://91pinse.com/static/favicon.ico',
+        title: '91pinse',
+        link: 'https://91pinse.com/',
+      },
+    ],
+  },
 ]
