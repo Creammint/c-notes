@@ -132,11 +132,18 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
           },
           {
+            text: 'THYUU/星度',
+            collapsed: false,
+            items: [
+              { text: 'THYUU/星度博客搭建', link: '/notes/blog/THYUU星度博客搭建' },
+            ]
+          },
+          {
             text: '环境配置',
             collapsed: false,
             items: [
               { text: 'vercel配置', link: '/notes/blog/vercel配置' },
-              
+              { text: '1Panel安装', link: '/notes/blog/1Panel安装' },
             ]
           }
       ],

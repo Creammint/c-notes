@@ -63,7 +63,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: 'blog', 
     items: [
       {text: 'Hexo',link: '/notes/blog/Hexo博客搭建' },
-      {text: 'VitePress',link: '/notes/blog/VitePress搭建' }
+      {text: 'VitePress',link: '/notes/blog/VitePress搭建' },
+      {text: 'THYUU',link: '/notes/blog/THYUU星度博客搭建' },
+      {text: '环境配置',link: '/notes/blog/vercel配置' },
     ]
   },
   { 
