@@ -144,6 +144,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             items: [
               { text: 'vercel配置', link: '/notes/blog/vercel配置' },
               { text: '1Panel安装', link: '/notes/blog/1Panel安装' },
+              { text: '封面设计工具', link: '/notes/blog/CoverMagic专业的封面设计工具' },
             ]
           }
       ],
